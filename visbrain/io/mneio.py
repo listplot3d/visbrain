@@ -47,8 +47,12 @@ def mne_switch(file, ext, downsample, preload=True, **kwargs):
         preload = 'temp.dat'
     kwargs['preload'] = preload
 
-    if ext.lower() in ['.edf', '.bdf', '.gdf']:  # EDF / BDF / GDF
+    if ext.lower() == '.edf':
         raw = io.read_raw_edf(path, **kwargs)
+    elif ext.lower() == '.bdf':
+        raw = io.read_raw_bdf(path, **kwargs)
+    elif ext.lower() == '.gdf':
+        raw = io.read_raw_gdf(path, **kwargs)
     elif ext.lower == '.set':   # EEGLAB
         raw = io.read_raw_eeglab(path, **kwargs)
     elif ext.lower() in ['.egi', '.mff']:  # EGI / MFF
