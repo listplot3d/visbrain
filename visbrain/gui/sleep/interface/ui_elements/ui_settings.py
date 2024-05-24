@@ -291,8 +291,8 @@ class UiSettings(object):
             self._hypcam.rect = (xlim[0], -len(self._hvalues),
                                  xlim_diff, len(self._hvalues) + 1)
             # Spectrogram :
-            # self._speccam.rect = (xlim[0], self._spec.freq[0], xlim_diff,
-            #                       self._spec.freq[-1] - self._spec.freq[0])
+            self._speccam.rect = (xlim[0], self._spec.freq[0], xlim_diff,
+                                  self._spec.freq[-1] - self._spec.freq[0])
             # Time axis :
             self._TimeAxis.set_data(xlim[0], win, np.array([xlim[0], xlim[1]]),
                                     unit='seconds', markers=self._annot_mark)
