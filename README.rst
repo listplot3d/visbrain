@@ -23,27 +23,33 @@ Cheers,
 Erik
 
 
+========
+Visbrain
+========
 
-# Visbrain
+.. image:: https://travis-ci.org/EtienneCmb/visbrain.svg?branch=master
+    :target: https://travis-ci.org/EtienneCmb/visbrain
 
+.. image:: https://ci.appveyor.com/api/projects/status/fdxhhmpagms1so8l/branch/master?svg=true
+    :target: https://ci.appveyor.com/project/EtienneCmb/visbrain/branch/master
 
-![https://travis-ci.org/EtienneCmb/visbrain](https://travis-ci.org/EtienneCmb/visbrain.svg?branch=master)
+.. image:: https://circleci.com/gh/EtienneCmb/visbrain/tree/master.svg?style=svg
+    :target: https://circleci.com/gh/EtienneCmb/visbrain/tree/master
 
-![https://ci.appveyor.com/project/EtienneCmb/visbrain/branch/master
-](https://ci.appveyor.com/api/projects/status/fdxhhmpagms1so8l/branch/master?svg=true)
+.. image:: https://codecov.io/gh/EtienneCmb/visbrain/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/EtienneCmb/visbrain
 
-![https://circleci.com/gh/EtienneCmb/visbrain/tree/master](https://circleci.com/gh/EtienneCmb/visbrain/tree/master.svg?style=svg)
+.. image:: https://badge.fury.io/py/visbrain.svg
+    :target: https://badge.fury.io/py/visbrain
 
-![https://codecov.io/gh/EtienneCmb/visbrain](https://codecov.io/gh/EtienneCmb/visbrain/branch/master/graph/badge.svg)
+.. image:: https://pepy.tech/badge/visbrain
+    :target: https://pepy.tech/project/visbrain
 
-![https://badge.fury.io/py/visbrain](https://badge.fury.io/py/visbrain.svg)
+.. image:: https://badges.gitter.im/visbrain-python/chatroom.svg
+    :target: https://gitter.im/visbrain-python/chatroom?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
 
-![https://pepy.tech/project/visbrain](https://pepy.tech/badge/visbrain)
-
-![https://gitter.im/visbrain-python/chatroom?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge](https://badges.gitter.im/visbrain-python/chatroom.svg)
-
-![](https://github.com/EtienneCmb/visbrain/blob/master/docs/_static/ico/visbrain.png)
-
+.. figure::  https://github.com/EtienneCmb/visbrain/blob/master/docs/_static/ico/visbrain.png
+    :align:  center
 
 **Visbrain** is an open-source python 3 package dedicated to brain signals visualization. It is based on top of `VisPy <http://vispy.org/>`_ and PyQt and is distributed under the 3-Clause BSD license. We also provide an on line `documentation <http://visbrain.org>`_, `examples and datasets <http://visbrain.org/auto_examples/>`_ and can also be downloaded from `PyPi <https://pypi.python.org/pypi/visbrain/>`_.
 

@@ -16,7 +16,7 @@ class UiSettings(object):
         # =====================================================================
         self._slFrame.setMaximumHeight(100)
         # Step for slider
-        self._SlStep = 0.1
+        #self._SlStep = 1
         # Function applied when the slider move :
         self._slOnStart = False
         self._fcn_slider_settings()
@@ -476,7 +476,7 @@ class UiSettings(object):
         # Update scoring table :
         self._fcn_hypno_to_score()
         # self._fcn_score_to_hypno()
-    
+
     def _fcn_hypoverlay_update(self):
         """Redraw the HypnoOverlay signal overlays."""
         viz = self.menuDispHypOverlay.isChecked()
