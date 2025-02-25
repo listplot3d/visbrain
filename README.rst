@@ -1,8 +1,8 @@
-This is a fork of Visbrain with important modifications to the Sleep GUI making
-it suitable (great?) for scoring animal data, while Sleep was originally designed
-for human scoring.
+This is the fork of a fork of Visbrain. 
 
-In particular, the following features were added:
+The first focus lies on visbrain.sleep. The original sleep moducal was design for AASM style sleep scoring. The first fork adapted this module for animal research. This for should adapt Sleep for SOP sleep scoring in humans, while benefitting of the continued improvements of the first fork.
+
+The first fork added in particular, added the following features:
 
 * Dissociation of 'display window' and 'scoring window', allowing one to score in short epochs while still visualizing data around the scoring window, as in standard in animal scoring. In "locked" mode, the scoring and display window are identical (as is standard for human scoring)
 
@@ -14,15 +14,13 @@ In particular, the following features were added:
 
 * Adding a "click-and-drag" window to select arbitrary epochs for subsequent scoring.  Life hack: if there is a rather long continuous epoch to score: click on signal to create the "click-and-drag" window, use "N" (while holding the mouse) to go to next window until you reach the end of the epoch, "close" the window where appropriate and score the whole thing at once. This will speed up dramatically scoring and hopefully make you happy.
 
-Hopefully all this stuff will be merged to the main repo eventually.
+Hopefully all this stuff will be merged to the main repo eventually. *At this point it seems unlikely, that the original Visbrain project will be continued to be maintained*
+
 Unfortunately this all comes with no guarantee regarding maintenance and system
 compatibility but feel free to contribute.
 
-
-Last but not least: here is the repo we use to load SpikeGLX (neuropixels) and TDT data, load a proxy to the EMG generated from LFP data, and launch the Sleep GUI: https://github.com/CSC-UW/sleepscore
-
-Best,
-Tom
+Cheers,
+Erik
 
 
 ========
