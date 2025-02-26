@@ -277,7 +277,7 @@ def write_hypno(filename, hypno, version='time', sf=100., npts=1, window=1.,
             info = {'*' + k: i for k, i in info.items()}
             df_info = pd.DataFrame({'State': list(info.keys()),
                                     'Time': list(info.values())})
-            df = df_info.append(df)
+            df = pd.concat([df_info,df])
         if ext in ['.txt', '.csv']:
             df.to_csv(filename, header=None, index=None, sep='\t', mode='a')
         elif ext == '.xlsx':
