@@ -16,7 +16,7 @@ class UiSettings(object):
         # =====================================================================
         self._slFrame.setMaximumHeight(100)
         # Step for slider
-        #self._SlStep = 1
+        self._SlStep = int(1)
         # Function applied when the slider move :
         self._slOnStart = False
         self._fcn_slider_settings()
@@ -318,16 +318,16 @@ class UiSettings(object):
         slmax = self._SlVal.maximum()
         win = self._SigWin.value()
         # Set minimum :
-        self._SlVal.setMinimum(self._time.min())
+        self._SlVal.setMinimum(int(self._time.min()))
         # Set maximum :
         step = self._SlStep
-        self._SlVal.setMaximum(((self._time.max() - win) / step) + 1)
+        self._SlVal.setMaximum(int(((self._time.max() - win) / step) + 1))
         self._SlVal.setTickInterval(step)
         self._SlVal.setSingleStep(step)
-        self._SlVal.setPageStep(self._SigStep.value())
-        self._SlGoto.setMaximum((self._time.max() - win))
+        self._SlVal.setPageStep(int(self._SigStep.value()))
+        self._SlGoto.setMaximum(int((self._time.max() - win)))
         # Re-set slider value :
-        self._SlVal.setValue(sl * self._SlVal.maximum() / slmax)
+        self._SlVal.setValue(int(sl * self._SlVal.maximum() / slmax))
 
         if self._slOnStart:
             self._fcn_slider_move()
@@ -376,7 +376,7 @@ class UiSettings(object):
 
     def _fcn_slider_win_selection(self):
         """Move slider using window spin."""
-        self._SlVal.setValue(self._SlGoto.value() / self._SlStep)
+        self._SlVal.setValue(int(self._SlGoto.value() / self._SlStep))
 
     def _fcn_slider_magnify(self):
         """Magnify signals."""
@@ -453,9 +453,7 @@ class UiSettings(object):
         # Scroll in units of self._SigStep
         delta_n = int(event.delta[1] * 60 * 0.25)
         delta_sec = self._SigStep.value() * delta_n
-        self._SlVal.setValue(
-            self._SlVal.value() + delta_sec / self._SlStep
-        )
+        self._SlVal.setValue(int(self._SlVal.value() + delta_sec / self._SlStep))
 
     # =====================================================================
     # HYPNO

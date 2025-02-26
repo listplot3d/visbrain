@@ -205,6 +205,7 @@ class ReadSleepData(object):
         self._data = vispy_array(data)
         self._hypno = vispy_array(hypno)
         self._time = vispy_array(time)
+        print(self._time)
         self._channels = channels
         self._hstates = np.array(hstates)  # Names
         self._hvalues = np.array(hvalues)
