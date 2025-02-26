@@ -193,7 +193,7 @@ def morlet_power(x, freqs, sf, norm=True):
     # Build frequency vector :
     f = np.c_[freqs[0:-1], freqs[1::]].mean(1)
     # Get wavelet transform :
-    xpow = np.zeros((len(f), len(x)), dtype=np.float)
+    xpow = np.zeros((len(f), len(x)), dtype=np.float64)
     for num, k in enumerate(f):
         xpow[num, :] = np.abs(morlet(x, sf, k))
     # Compute inplace power :
@@ -233,7 +233,7 @@ def welch_power(x, freqs, sf, window_s=10, norm=True):
     freq_spacing = .1
     n_epoch = max(1, int(len(x) / (window_s * sf)))
 
-    xpow = np.zeros((len(freqs) - 1, n_epoch), dtype=np.float)
+    xpow = np.zeros((len(freqs) - 1, n_epoch), dtype=np.float64)
 
     for i in np.arange(0, len(x), window_s * sf):
         f, pxx_spec = welch(x[int(i):int(i + window_s * sf)], sf,
