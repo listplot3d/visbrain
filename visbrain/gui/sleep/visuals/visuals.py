@@ -1357,8 +1357,10 @@ class CanvasShortcuts(object):
             if condition and not self._slMagnify.isChecked():
                 # Get channel name :
                 chan = name.split('Canvas_')[1]
+                print(chan)
                 # Get index :
-                idx = self._channels.index(chan)
+                #idx = self._channels.index(chan)
+                idx = [chan in channel for channel in self._channels].index(True) 
                 # Build transformation :
                 kwargs = {'center': (cursor, 0.), 'radii': (3, 15), 'mag': 10}
                 transform = vist.nonlinear.Magnify1DTransform(**kwargs)
@@ -1429,7 +1431,8 @@ class CanvasShortcuts(object):
                 # Get channel name :
                 chan = name.split('Canvas_')[1]
                 # Get index :
-                idx = self._channels.index(chan)
+                #idx = self._channels.index(chan)
+                idx = [chan in channel for channel in self._channels].index(True)
                 # Build transformation :
                 self._chan.node[idx].transform = vist.NullTransform()
             # Quit mouse-scoring mode if no window was drawn/we clicked
