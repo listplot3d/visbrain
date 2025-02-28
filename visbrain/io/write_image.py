@@ -153,7 +153,7 @@ def write_fig_hyp(data, sf, file=None, start_s=0, grid=False, ascolor=False,
 
     ax.spines['left'].set_position(('outward', 10))
     ax.spines['bottom'].set_position(('outward', 10))
-    ax.spines['bottom'].set_smart_bounds(True)
+    #ax.spines['bottom'].set_smart_bounds(True) ~~Deprecated~~
 
     # Save as 600 dpi .png
     if isinstance(file, str):
