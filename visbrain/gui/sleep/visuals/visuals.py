@@ -1371,7 +1371,7 @@ class CanvasShortcuts(object):
             if (
                 cursor >= 0
                 and (  # noqa
-                    any([chan in canvas.title for chan in self._channels])
+                    any([name[7::] in channel for channel in self._channels])
                     or (canvas.title in ['Spectrogram', 'Hypnogram']  # noqa
                         and self.menuDispZoom.isChecked())  # noqa
                  )
