@@ -84,11 +84,13 @@ User installation
 
 Install Visbrain :
 Get the dependencies
+
 .. code-block:: console
 
     pip install -r requeriments.txt
 
 Clone the repo and install visbrain from the folder
+
 .. code-block:: console
 
     pip install -U .
