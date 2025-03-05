@@ -91,5 +91,5 @@ Get the dependencies
 Clone the repo and install visbrain from the folder
 .. code-block:: console
 
-pip install -U .
+    pip install -U .
 
