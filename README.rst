@@ -77,12 +77,19 @@ Visbrain requires :
 * Pillow
 * PyOpenGL
 
+MNE-Python is recommended.
+
 User installation
 +++++++++++++++++
 
 Install Visbrain :
-
+Get the dependencies
 .. code-block:: console
 
-    pip install -U visbrain
+    pip install -r requeriments.txt
+
+Clone the repo and install visbrain from the folder
+.. code-block:: console
+
+pip install -U .
 
