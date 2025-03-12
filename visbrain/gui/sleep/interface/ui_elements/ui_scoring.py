@@ -49,6 +49,7 @@ class UiScoring(object):
             self._scoreTable.setItem(k, 2, QtWidgets.QTableWidgetItem(
                 state_labels[k]))
         self._scoreSet = True
+        self._hyp.set_data(self._sf, self._hypno, self._time)
 
     def _fcn_score_to_hypno(self):
         """Update hypno data from hypno score."""
@@ -69,6 +70,7 @@ class UiScoring(object):
             self._fcn_info_update()
             # Update hypno overlay
             self._fcn_hypoverlay_update()
+            self._hyp.set_data(self._sf, self._hypno, self._time)
 
     def _get_score_marker(self, idx):
         """Get a specific row dat.
