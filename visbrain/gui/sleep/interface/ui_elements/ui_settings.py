@@ -482,10 +482,11 @@ class UiSettings(object):
         for i, _ in self._chan:
             hyp_overlay = self._chan.hyp_overlay[i]
             if viz:
-                # Build color array everytime
-                hcolors = self._hyp.hcolors
-                data_colors = np.array([hcolors[v] for v in self._hypno], dtype=np.float32).squeeze()
-                data_colors[:, 3] = hyp_overlay.alpha
+                # Build color array once (again)
+                if data_colors is None:
+                    hcolors = self._hyp.hcolors
+                    data_colors = np.array([hcolors[v] for v in self._hypno], dtype=np.float32).squeeze()
+                    data_colors[:, 3] = hyp_overlay.alpha
                 # Apply same color array to all
                 hyp_overlay.set_data(data_colors)
             hyp_overlay.region.visible = viz
