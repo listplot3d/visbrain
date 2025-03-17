@@ -1,0 +1,101 @@
+{
+ "Brain": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.gui",
+   "module_short": "visbrain.gui",
+   "name": "Brain"
+  }
+ ],
+ "ConnectObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "ConnectObj"
+  }
+ ],
+ "SourceObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "SourceObj"
+  }
+ ],
+ "__doc__": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "str"
+  }
+ ],
+ "download_file": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "download_file"
+  }
+ ],
+ "np.load": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "load"
+  }
+ ],
+ "np.logical_and": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "logical_and"
+  }
+ ],
+ "np.logical_or": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "logical_or"
+  }
+ ],
+ "np.ma.masked_array": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy.ma",
+   "module_short": "numpy.ma",
+   "name": "masked_array"
+  }
+ ],
+ "np.random.uniform": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy.random",
+   "module_short": "numpy.random",
+   "name": "uniform"
+  }
+ ],
+ "np.tril_indices_from": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "tril_indices_from"
+  }
+ ]
+}

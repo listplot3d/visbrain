@@ -1,0 +1,37 @@
+﻿visbrain.objects.VispyObj
+=========================
+
+.. currentmodule:: visbrain.objects
+
+.. autoclass:: VispyObj
+   :exclude-members: __init__, set_shortcuts_to_canvas, to_dict, to_kwargs, update, update_from_dict, describe_tree
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: VispyObj
+   
+      ~VispyObj.__init__
+      ~VispyObj.animate
+      ~VispyObj.copy
+      ~VispyObj.describe_tree
+      ~VispyObj.preview
+      ~VispyObj.record_animation
+      ~VispyObj.render
+      ~VispyObj.screenshot
+      ~VispyObj.set_shortcuts_to_canvas
+      ~VispyObj.to_dict
+      ~VispyObj.to_kwargs
+      ~VispyObj.update
+      ~VispyObj.update_from_dict
+   
+   
+
+.. include:: visbrain.objects.VispyObj.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,0 +1,101 @@
+{
+ "Brain": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.gui",
+   "module_short": "visbrain.gui",
+   "name": "Brain"
+  }
+ ],
+ "SourceObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "SourceObj"
+  }
+ ],
+ "TimeSeries3DObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "TimeSeries3DObj"
+  }
+ ],
+ "download_file": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "download_file"
+  }
+ ],
+ "np.load": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "load"
+  }
+ ],
+ "np.mgrid": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "mgrid"
+  }
+ ],
+ "np.ones": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ones"
+  }
+ ],
+ "np.pi": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "pi"
+  }
+ ],
+ "np.random.randint": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy.random",
+   "module_short": "numpy.random",
+   "name": "randint"
+  }
+ ],
+ "np.random.randn": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy.random",
+   "module_short": "numpy.random",
+   "name": "randn"
+  }
+ ],
+ "np.sin": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "sin"
+  }
+ ]
+}

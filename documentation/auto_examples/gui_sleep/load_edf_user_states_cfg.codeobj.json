@@ -1,0 +1,77 @@
+{
+ "Sleep": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.gui",
+   "module_short": "visbrain.gui",
+   "name": "Sleep"
+  }
+ ],
+ "download_file": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "download_file"
+  }
+ ],
+ "os.path.abspath": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os.path",
+   "module_short": "os.path",
+   "name": "abspath"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os.path",
+   "module_short": "os.path",
+   "name": "abspath"
+  }
+ ],
+ "os.path.dirname": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os.path",
+   "module_short": "os.path",
+   "name": "dirname"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os.path",
+   "module_short": "os.path",
+   "name": "dirname"
+  }
+ ],
+ "os.path.join": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os.path",
+   "module_short": "os.path",
+   "name": "join"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os.path",
+   "module_short": "os.path",
+   "name": "join"
+  }
+ ],
+ "path_to_visbrain_data": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "path_to_visbrain_data"
+  }
+ ]
+}

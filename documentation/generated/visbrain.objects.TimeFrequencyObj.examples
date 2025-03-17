@@ -1,0 +1,42 @@
+
+
+Examples using ``visbrain.objects.TimeFrequencyObj``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Use and control image, time-frequency maps and spectrogram.">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_im_tf_spec_obj_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_im_tf_spec_obj.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Image, time-frequency map and spectrogram objects</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_im_tf_spec_obj.py`
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+

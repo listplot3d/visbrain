@@ -1,0 +1,11 @@
+{
+ "Sleep": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.gui",
+   "module_short": "visbrain.gui",
+   "name": "Sleep"
+  }
+ ]
+}

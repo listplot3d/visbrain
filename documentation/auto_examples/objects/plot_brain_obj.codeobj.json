@@ -1,0 +1,74 @@
+{
+ "BrainObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "BrainObj"
+  }
+ ],
+ "ColorbarObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "ColorbarObj"
+  }
+ ],
+ "SceneObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "SceneObj"
+  }
+ ],
+ "SourceObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "SourceObj"
+  }
+ ],
+ "download_file": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "download_file"
+  }
+ ],
+ "np.load": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "load"
+  }
+ ],
+ "np.random.rand": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy.random",
+   "module_short": "numpy.random",
+   "name": "rand"
+  }
+ ],
+ "read_stc": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "read_stc"
+  }
+ ]
+}

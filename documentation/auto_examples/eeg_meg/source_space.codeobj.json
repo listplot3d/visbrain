@@ -1,0 +1,83 @@
+{
+ "Brain": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.gui",
+   "module_short": "visbrain.gui",
+   "name": "Brain"
+  }
+ ],
+ "mne_plot_source_space": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.mne",
+   "module_short": "visbrain.mne",
+   "name": "mne_plot_source_space"
+  }
+ ],
+ "np.arange": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "arange"
+  }
+ ],
+ "os.path.join": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os.path",
+   "module_short": "os.path",
+   "name": "join"
+  }
+ ],
+ "sample.data_path": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "mne.datasets.sample",
+   "module_short": "mne.datasets.sample",
+   "name": "data_path"
+  }
+ ],
+ "visbrain.Brain": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain",
+   "module_short": "visbrain",
+   "name": "Brain"
+  }
+ ],
+ "visbrain.mne.mne_plot_source_space": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.mne",
+   "module_short": "visbrain.mne",
+   "name": "mne_plot_source_space"
+  }
+ ],
+ "visbrain.objects.BrainObj": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "BrainObj"
+  }
+ ],
+ "visbrain.objects.SourceObj": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "SourceObj"
+  }
+ ]
+}

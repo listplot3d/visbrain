@@ -1,0 +1,20 @@
+{
+ "Brain": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.gui",
+   "module_short": "visbrain.gui",
+   "name": "Brain"
+  }
+ ],
+ "BrainObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "BrainObj"
+  }
+ ]
+}

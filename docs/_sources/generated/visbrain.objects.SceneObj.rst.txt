@@ -1,0 +1,31 @@
+﻿visbrain.objects.SceneObj
+=========================
+
+.. currentmodule:: visbrain.objects
+
+.. autoclass:: SceneObj
+   :exclude-members: __init__, set_shortcuts_to_canvas, to_dict, to_kwargs, update, update_from_dict, describe_tree
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: SceneObj
+   
+      ~SceneObj.__init__
+      ~SceneObj.add_to_subplot
+      ~SceneObj.link
+      ~SceneObj.preview
+      ~SceneObj.record_animation
+      ~SceneObj.render
+      ~SceneObj.screenshot
+   
+   
+
+.. include:: visbrain.objects.SceneObj.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

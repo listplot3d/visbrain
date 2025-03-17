@@ -1,0 +1,189 @@
+
+
+Examples using ``visbrain.utils.generate_eeg``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrate the feasibility to combine multiple objects in the same scene.">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_combine_objects_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_combine_objects.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Combine multiple objects</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_combine_objects.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrate the main functionalities and inputs of the grid of time-series object i.e :">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_gridsignals_obj_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_gridsignals_obj.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Grid of signals object (GridSignalsObj) : complete tutorial</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_gridsignals_obj.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Illustration of the main features of 3d time-series and pictures. This include :">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_tspic_obj_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_tspic_obj.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Time-series and pictures 3D (TimeSeries3DObj & Picture3DObj): complete tutorial</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_tspic_obj.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot a basic vector. Then, you can visualize this vector as a continuous line, markers, histogram or compute the time-frequency map or power spectrum density (PSD).">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_signal/images/thumb/sphx_glr_00_1d_signal_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_signal_00_1d_signal.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot a 1D signal</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_signal_00_1d_signal.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Dispose a two dimensional array of data into a grid.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_signal/images/thumb/sphx_glr_01_2d_signals_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_signal_01_2d_signals.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot a 2D array of data</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_signal_01_2d_signals.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot and inspect a 3D array of data.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_signal/images/thumb/sphx_glr_02_3d_signals_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_signal_02_3d_signals.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot a 3D array of data</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_signal_02_3d_signals.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Use custom color, font size...">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_signal/images/thumb/sphx_glr_03_interface_customization_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_signal_03_interface_customization.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Interface customization</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_signal_03_interface_customization.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Import annotations from a text file and annotate trials.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_signal/images/thumb/sphx_glr_04_annotations_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_signal_04_annotations.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Import, save and add annotations</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_signal_04_annotations.py`
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+

@@ -1,0 +1,420 @@
+
+
+Examples using ``visbrain.gui.Brain``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Control the brain i.e the brain template to use, the transparency and the hemisphere.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_00_brain_control_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_00_brain_control.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Brain control</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_00_brain_control.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Control the cross-section panel and the volume using a Nifti file. The nibabel package should also be installed.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_01_cross_sections_and_volume_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_01_cross_sections_and_volume.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Cross-sections and volume control</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_01_cross_sections_and_volume.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrate how to define a custom brain template using your own vertices and faces.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_02_brain_using_vertices_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_02_brain_using_vertices.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Define a brain template using vertices and faces</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_02_brain_using_vertices.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Add sources to the scene. This script also illustrate most of the controls for sources. Each source is defined by a (x, y, z) MNI coordinate. Then, we can attach some data to sources and project this activity onto the surface (cortical projection). Alternatively, you can run the cortical repartition which is defined as the number of contributing sources per vertex.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_03_sources_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_03_sources.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add deep sources</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_03_sources.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Display and customize connectivity. To this end, we define some deep sources and connect them.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_04_connectivity_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_04_connectivity.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Connect deep sources</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_04_connectivity.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrate how to display Region Of Interest (ROI).">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_05_region_of_interest_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_05_region_of_interest.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add Region of interest (ROI)</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_05_region_of_interest.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrate how to display time-series attached to sources. The time-series can then be controlled from the GUI in the Sources/Time-series tab.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_06_add_time_series_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_06_add_time_series.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add time series</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_06_add_time_series.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrate how to display small pictures attached to sources. The pictures can then be controlled from the GUI in the Sources/Pictures tab.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_07_add_pictures_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_07_add_pictures.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add pictures</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_07_add_pictures.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Offline rendering of selected canvas.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_08_screenshot_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_08_screenshot.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Screenshot example</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_08_screenshot.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Add multiple source&#x27;s and connectivity object to the scene.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_09_add_multiple_objects_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_09_add_multiple_objects.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add multiple objects to the scene</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_09_add_multiple_objects.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Import a custom Nifti volume that can be then used in the cross-section or volume tab. To this end, the python package nibabel must be installed and custom Nifti volume must be downloaded. When the volume is loaded into the GUI, it&#x27;s accessible from the Brain/Cross-sections and Brain/Volume tab.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_10_add_nifti_volume_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_10_add_nifti_volume.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add Nifti volume</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_10_add_nifti_volume.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Add vectors to the scene. This example demonstrate the two methods to defined vectors :">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_11_add_vectors_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_11_add_vectors.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add vectors</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_11_add_vectors.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Parcellize the brain surface using .annot files. This example use Nibabel to read the .annot file.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_12_parcellize_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_12_parcellize.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Parcellize brain surface</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_12_parcellize.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Display a conjunction map from a nii.gz file (NiBabel required).">
+
+.. only:: html
+
+  .. image:: /auto_examples/eeg_meg/images/thumb/sphx_glr_conjunction_map_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_eeg_meg_conjunction_map.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Display conjunction map</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_eeg_meg_conjunction_map.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Display fMRI activations from a nii.gz file (NiBabel required).">
+
+.. only:: html
+
+  .. image:: /auto_examples/eeg_meg/images/thumb/sphx_glr_fmri_activation_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_eeg_meg_fmri_activation.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Display fMRI activation</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_eeg_meg_fmri_activation.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot MEG inverse solution.">
+
+.. only:: html
+
+  .. image:: /auto_examples/eeg_meg/images/thumb/sphx_glr_meg_inverse_solution_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_eeg_meg_meg_inverse_solution.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot MEG inverse solution</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_eeg_meg_meg_inverse_solution.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot from a .fif file using the visbrain.mne.mne_plot_source_space function">
+
+.. only:: html
+
+  .. image:: /auto_examples/eeg_meg/images/thumb/sphx_glr_source_space_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_eeg_meg_source_space.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot source space</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_eeg_meg_source_space.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot vector-valued MEG inverse solution.">
+
+.. only:: html
+
+  .. image:: /auto_examples/eeg_meg/images/thumb/sphx_glr_vector_based_meg_inverse_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_eeg_meg_vector_based_meg_inverse.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot vector-valued MEG inverse solution</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_eeg_meg_vector_based_meg_inverse.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This script generate some figures using the Brain module. Those exported pictures are going to be set in a layout in the 1_LayoutExample.py script.">
+
+.. only:: html
+
+  .. image:: /auto_examples/figure/images/thumb/sphx_glr_0_GeneratePictures_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_figure_0_GeneratePictures.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Generate pictures</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_figure_0_GeneratePictures.py`
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+

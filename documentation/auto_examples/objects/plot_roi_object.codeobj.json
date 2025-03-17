@@ -1,0 +1,164 @@
+{
+ "BrainObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "BrainObj"
+  }
+ ],
+ "ColorbarObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "ColorbarObj"
+  }
+ ],
+ "RoiObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "RoiObj"
+  }
+ ],
+ "SceneObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "SceneObj"
+  }
+ ],
+ "SourceObj": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.objects",
+   "module_short": "visbrain.objects",
+   "name": "SourceObj"
+  }
+ ],
+ "download_file": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "download_file"
+  }
+ ],
+ "np.delete": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "delete"
+  }
+ ],
+ "np.genfromtxt": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "genfromtxt"
+  }
+ ],
+ "np.load": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "load"
+  }
+ ],
+ "np.random.uniform": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy.random",
+   "module_short": "numpy.random",
+   "name": "uniform"
+  }
+ ],
+ "np.zeros": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "zeros"
+  }
+ ],
+ "path_to_visbrain_data": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "path_to_visbrain_data"
+  }
+ ],
+ "read_nifti": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "visbrain.io",
+   "module_short": "visbrain.io",
+   "name": "read_nifti"
+  }
+ ],
+ "visbrain.object.SourceObj.project_sources": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.object.SourceObj",
+   "module_short": "visbrain.object.SourceObj",
+   "name": "project_sources"
+  }
+ ],
+ "visbrain.objects.RoiObj.get_labels": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.objects.RoiObj",
+   "module_short": "visbrain.objects.RoiObj",
+   "name": "get_labels"
+  }
+ ],
+ "visbrain.objects.RoiObj.save": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.objects.RoiObj",
+   "module_short": "visbrain.objects.RoiObj",
+   "name": "save"
+  }
+ ],
+ "visbrain.objects.RoiObj.select_roi": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.objects.RoiObj",
+   "module_short": "visbrain.objects.RoiObj",
+   "name": "select_roi"
+  }
+ ],
+ "visbrain.objects.RoiObj.where_is": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "visbrain.objects.RoiObj",
+   "module_short": "visbrain.objects.RoiObj",
+   "name": "where_is"
+  }
+ ]
+}

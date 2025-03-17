@@ -1,0 +1,1420 @@
+{
+ "visbrain.Brain": [
+  [
+   "source_space.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot from a .fif file using the visbrain.mne.mne_plot_source_space function",
+   "Plot source space"
+  ]
+ ],
+ "visbrain.gui.Brain": [
+  [
+   "00_brain_control.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Control the brain i.e the brain template to use, the transparency and the hemisphere.",
+   "Brain control"
+  ],
+  [
+   "01_cross_sections_and_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Control the cross-section panel and the volume using a Nifti file. The nibabel package should also be installed.",
+   "Cross-sections and volume control"
+  ],
+  [
+   "02_brain_using_vertices.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to define a custom brain template using your own vertices and faces.",
+   "Define a brain template using vertices and faces"
+  ],
+  [
+   "03_sources.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add sources to the scene. This script also illustrate most of the controls for sources. Each source is defined by a (x, y, z) MNI coordinate. Then, we can attach some data to sources and project this activity onto the surface (cortical projection). Alternatively, you can run the cortical repartition which is defined as the number of contributing sources per vertex.",
+   "Add deep sources"
+  ],
+  [
+   "04_connectivity.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Display and customize connectivity. To this end, we define some deep sources and connect them.",
+   "Connect deep sources"
+  ],
+  [
+   "05_region_of_interest.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to display Region Of Interest (ROI).",
+   "Add Region of interest (ROI)"
+  ],
+  [
+   "06_add_time_series.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display time-series attached to sources. The time-series can then be controlled from the GUI in the Sources/Time-series tab.",
+   "Add time series"
+  ],
+  [
+   "07_add_pictures.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display small pictures attached to sources. The pictures can then be controlled from the GUI in the Sources/Pictures tab.",
+   "Add pictures"
+  ],
+  [
+   "08_screenshot.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Offline rendering of selected canvas.",
+   "Screenshot example"
+  ],
+  [
+   "09_add_multiple_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add multiple source's and connectivity object to the scene.",
+   "Add multiple objects to the scene"
+  ],
+  [
+   "10_add_nifti_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Import a custom Nifti volume that can be then used in the cross-section or volume tab. To this end, the python package nibabel must be installed and custom Nifti volume must be downloaded. When the volume is loaded into the GUI, it's accessible from the Brain/Cross-sections and Brain/Volume tab.",
+   "Add Nifti volume"
+  ],
+  [
+   "11_add_vectors.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add vectors to the scene. This example demonstrate the two methods to defined vectors :",
+   "Add vectors"
+  ],
+  [
+   "12_parcellize.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Parcellize the brain surface using .annot files. This example use Nibabel to read the .annot file.",
+   "Parcellize brain surface"
+  ],
+  [
+   "conjunction_map.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Display a conjunction map from a nii.gz file (NiBabel required).",
+   "Display conjunction map"
+  ],
+  [
+   "fmri_activation.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Display fMRI activations from a nii.gz file (NiBabel required).",
+   "Display fMRI activation"
+  ],
+  [
+   "meg_inverse_solution.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot MEG inverse solution.",
+   "Plot MEG inverse solution"
+  ],
+  [
+   "source_space.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot from a .fif file using the visbrain.mne.mne_plot_source_space function",
+   "Plot source space"
+  ],
+  [
+   "vector_based_meg_inverse.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot vector-valued MEG inverse solution.",
+   "Plot vector-valued MEG inverse solution"
+  ],
+  [
+   "0_GeneratePictures.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/figure",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/figure",
+   "This script generate some figures using the Brain module. Those exported pictures are going to be set in a layout in the 1_LayoutExample.py script.",
+   "Generate pictures"
+  ]
+ ],
+ "visbrain.gui.Figure": [
+  [
+   "1_LayoutExample.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/figure",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/figure",
+   "Arange pictures in a grid.",
+   "Page layout example"
+  ]
+ ],
+ "visbrain.gui.Signal": [
+  [
+   "00_1d_signal.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Plot a basic vector. Then, you can visualize this vector as a continuous line, markers, histogram or compute the time-frequency map or power spectrum density (PSD).",
+   "Plot a 1D signal"
+  ],
+  [
+   "01_2d_signals.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Dispose a two dimensional array of data into a grid.",
+   "Plot a 2D array of data"
+  ],
+  [
+   "02_3d_signals.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Plot and inspect a 3D array of data.",
+   "Plot a 3D array of data"
+  ],
+  [
+   "03_interface_customization.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Use custom color, font size...",
+   "Interface customization"
+  ],
+  [
+   "04_annotations.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Import annotations from a text file and annotate trials.",
+   "Import, save and add annotations"
+  ],
+  [
+   "05_screenshot.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Export all of the time-frequency maps, psd of a dataset.",
+   "Screenshot tutorial"
+  ],
+  [
+   "06_butterfly.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Superimposition of all the signals.",
+   "Butterfly plot"
+  ]
+ ],
+ "visbrain.gui.Sleep": [
+  [
+   "basic_sleep.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to open Sleep.",
+   "Basic configuration"
+  ],
+  [
+   "load_brainvision.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load a BrainVision file.",
+   "Load a BrainVision file"
+  ],
+  [
+   "load_edf.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an EDF file.",
+   "Load EDF file"
+  ],
+  [
+   "load_edf_user_states_cfg.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to specify custom configuration for vigilance states.",
+   "Load EDF file with custom vigilance state configuration"
+  ],
+  [
+   "load_elan.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an ELAN file.",
+   "Load ELAN files"
+  ],
+  [
+   "load_matlab.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an ELAN file.",
+   "Load a Matlab file"
+  ],
+  [
+   "load_rec.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load a .rec file.",
+   "Load REC files"
+  ],
+  [
+   "load_using_mne.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example shows how to load data using MNE-Python package. https://martinos.org/mne/stable/index.html",
+   "Load a file using MNE-python"
+  ],
+  [
+   "replace_detection_basic.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default detection algorithm.",
+   "Replace detection algorithm : basic example"
+  ],
+  [
+   "replace_detection_wonambi.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default spindle detection algorithm with those implemented inside wonambi.",
+   "Replace detection with wonambi algorithm"
+  ]
+ ],
+ "visbrain.gui.Sleep.replace_detections": [
+  [
+   "replace_detection_basic.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default detection algorithm.",
+   "Replace detection algorithm : basic example"
+  ],
+  [
+   "replace_detection_wonambi.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default spindle detection algorithm with those implemented inside wonambi.",
+   "Replace detection with wonambi algorithm"
+  ]
+ ],
+ "visbrain.io.download_file": [
+  [
+   "plot_animate_scene.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to animate objects inside the scene. Note that animations can only be used with 3D objects.",
+   "Animate objects in the scene"
+  ],
+  [
+   "plot_brain_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the brain object i.e :",
+   "Brain object (BrainObj) : complete tutorial"
+  ],
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_connectivity_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the connectivity object:",
+   "Connectivity object (ConnectObj) : complete tutorial"
+  ],
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ],
+  [
+   "plot_source_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the source object i.e :",
+   "Source object (SourceObj) : complete tutorial"
+  ],
+  [
+   "plot_topo_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the topoplot object i.e :",
+   "Topoplot object (TopoObj) : complete tutorial"
+  ],
+  [
+   "plot_volume_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the volume object :",
+   "Volume object (VolumeObj) : complete tutorial"
+  ],
+  [
+   "plot_x3d_files.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to plot .x3d files. 6 brain templates are going to be downloaded (total of 26.3Mo). Additional templates can be downloaded from : https://scalablebrainatlas.incf.org",
+   "Plot x3d files"
+  ],
+  [
+   "01_cross_sections_and_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Control the cross-section panel and the volume using a Nifti file. The nibabel package should also be installed.",
+   "Cross-sections and volume control"
+  ],
+  [
+   "02_brain_using_vertices.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to define a custom brain template using your own vertices and faces.",
+   "Define a brain template using vertices and faces"
+  ],
+  [
+   "03_sources.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add sources to the scene. This script also illustrate most of the controls for sources. Each source is defined by a (x, y, z) MNI coordinate. Then, we can attach some data to sources and project this activity onto the surface (cortical projection). Alternatively, you can run the cortical repartition which is defined as the number of contributing sources per vertex.",
+   "Add deep sources"
+  ],
+  [
+   "04_connectivity.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Display and customize connectivity. To this end, we define some deep sources and connect them.",
+   "Connect deep sources"
+  ],
+  [
+   "05_region_of_interest.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to display Region Of Interest (ROI).",
+   "Add Region of interest (ROI)"
+  ],
+  [
+   "06_add_time_series.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display time-series attached to sources. The time-series can then be controlled from the GUI in the Sources/Time-series tab.",
+   "Add time series"
+  ],
+  [
+   "07_add_pictures.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display small pictures attached to sources. The pictures can then be controlled from the GUI in the Sources/Pictures tab.",
+   "Add pictures"
+  ],
+  [
+   "08_screenshot.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Offline rendering of selected canvas.",
+   "Screenshot example"
+  ],
+  [
+   "09_add_multiple_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add multiple source's and connectivity object to the scene.",
+   "Add multiple objects to the scene"
+  ],
+  [
+   "10_add_nifti_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Import a custom Nifti volume that can be then used in the cross-section or volume tab. To this end, the python package nibabel must be installed and custom Nifti volume must be downloaded. When the volume is loaded into the GUI, it's accessible from the Brain/Cross-sections and Brain/Volume tab.",
+   "Add Nifti volume"
+  ],
+  [
+   "11_add_vectors.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add vectors to the scene. This example demonstrate the two methods to defined vectors :",
+   "Add vectors"
+  ],
+  [
+   "12_parcellize.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Parcellize the brain surface using .annot files. This example use Nibabel to read the .annot file.",
+   "Parcellize brain surface"
+  ],
+  [
+   "load_brainvision.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load a BrainVision file.",
+   "Load a BrainVision file"
+  ],
+  [
+   "load_edf.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an EDF file.",
+   "Load EDF file"
+  ],
+  [
+   "load_edf_user_states_cfg.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to specify custom configuration for vigilance states.",
+   "Load EDF file with custom vigilance state configuration"
+  ],
+  [
+   "load_elan.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an ELAN file.",
+   "Load ELAN files"
+  ],
+  [
+   "load_matlab.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an ELAN file.",
+   "Load a Matlab file"
+  ],
+  [
+   "load_rec.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load a .rec file.",
+   "Load REC files"
+  ],
+  [
+   "load_using_mne.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example shows how to load data using MNE-Python package. https://martinos.org/mne/stable/index.html",
+   "Load a file using MNE-python"
+  ],
+  [
+   "plot_get_sleep_statistics.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "Get sleep statictics such as sleep stages duration, duration of the hypnogram.",
+   "Get sleep statistics"
+  ],
+  [
+   "plot_hypnogram.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "Plot a hypnogram using matplotlib.",
+   "Matplotlib plot of an hypnogram"
+  ],
+  [
+   "replace_detection_basic.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default detection algorithm.",
+   "Replace detection algorithm : basic example"
+  ],
+  [
+   "replace_detection_wonambi.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default spindle detection algorithm with those implemented inside wonambi.",
+   "Replace detection with wonambi algorithm"
+  ],
+  [
+   "conjunction_map.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Display a conjunction map from a nii.gz file (NiBabel required).",
+   "Display conjunction map"
+  ],
+  [
+   "fmri_activation.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Display fMRI activations from a nii.gz file (NiBabel required).",
+   "Display fMRI activation"
+  ],
+  [
+   "meg_inverse_solution.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot MEG inverse solution.",
+   "Plot MEG inverse solution"
+  ],
+  [
+   "vector_based_meg_inverse.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot vector-valued MEG inverse solution.",
+   "Plot vector-valued MEG inverse solution"
+  ],
+  [
+   "1_LayoutExample.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/figure",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/figure",
+   "Arange pictures in a grid.",
+   "Page layout example"
+  ]
+ ],
+ "visbrain.io.get_sleep_stats": [
+  [
+   "plot_get_sleep_statistics.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "Get sleep statictics such as sleep stages duration, duration of the hypnogram.",
+   "Get sleep statistics"
+  ]
+ ],
+ "visbrain.io.path_to_visbrain_data": [
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ],
+  [
+   "08_screenshot.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Offline rendering of selected canvas.",
+   "Screenshot example"
+  ],
+  [
+   "load_brainvision.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load a BrainVision file.",
+   "Load a BrainVision file"
+  ],
+  [
+   "load_edf.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an EDF file.",
+   "Load EDF file"
+  ],
+  [
+   "load_edf_user_states_cfg.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to specify custom configuration for vigilance states.",
+   "Load EDF file with custom vigilance state configuration"
+  ],
+  [
+   "load_elan.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an ELAN file.",
+   "Load ELAN files"
+  ],
+  [
+   "load_matlab.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load an ELAN file.",
+   "Load a Matlab file"
+  ],
+  [
+   "load_rec.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example demonstrate how to load a .rec file.",
+   "Load REC files"
+  ],
+  [
+   "load_using_mne.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example shows how to load data using MNE-Python package. https://martinos.org/mne/stable/index.html",
+   "Load a file using MNE-python"
+  ],
+  [
+   "replace_detection_basic.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default detection algorithm.",
+   "Replace detection algorithm : basic example"
+  ],
+  [
+   "replace_detection_wonambi.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "This example illustrates how to replace the default spindle detection algorithm with those implemented inside wonambi.",
+   "Replace detection with wonambi algorithm"
+  ]
+ ],
+ "visbrain.io.read_hypno": [
+  [
+   "plot_hypnogram.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "Plot a hypnogram using matplotlib.",
+   "Matplotlib plot of an hypnogram"
+  ]
+ ],
+ "visbrain.io.read_nifti": [
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.io.read_stc": [
+  [
+   "plot_brain_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the brain object i.e :",
+   "Brain object (BrainObj) : complete tutorial"
+  ],
+  [
+   "meg_inverse_solution.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot MEG inverse solution.",
+   "Plot MEG inverse solution"
+  ],
+  [
+   "vector_based_meg_inverse.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot vector-valued MEG inverse solution.",
+   "Plot vector-valued MEG inverse solution"
+  ]
+ ],
+ "visbrain.io.write_fig_hyp": [
+  [
+   "plot_hypnogram.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_sleep",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_sleep",
+   "Plot a hypnogram using matplotlib.",
+   "Matplotlib plot of an hypnogram"
+  ]
+ ],
+ "visbrain.mne.mne_plot_source_estimation": [
+  [
+   "forward_solution.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot source estimation.",
+   "Plot forward solution"
+  ]
+ ],
+ "visbrain.mne.mne_plot_source_space": [
+  [
+   "source_space.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot from a .fif file using the visbrain.mne.mne_plot_source_space function",
+   "Plot source space"
+  ]
+ ],
+ "visbrain.object.SourceObj.project_sources": [
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.BrainObj": [
+  [
+   "plot_animate_scene.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to animate objects inside the scene. Note that animations can only be used with 3D objects.",
+   "Animate objects in the scene"
+  ],
+  [
+   "plot_brain_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the brain object i.e :",
+   "Brain object (BrainObj) : complete tutorial"
+  ],
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_connectivity_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the connectivity object:",
+   "Connectivity object (ConnectObj) : complete tutorial"
+  ],
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ],
+  [
+   "plot_source_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the source object i.e :",
+   "Source object (SourceObj) : complete tutorial"
+  ],
+  [
+   "plot_x3d_files.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to plot .x3d files. 6 brain templates are going to be downloaded (total of 26.3Mo). Additional templates can be downloaded from : https://scalablebrainatlas.incf.org",
+   "Plot x3d files"
+  ],
+  [
+   "00_brain_control.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Control the brain i.e the brain template to use, the transparency and the hemisphere.",
+   "Brain control"
+  ],
+  [
+   "02_brain_using_vertices.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to define a custom brain template using your own vertices and faces.",
+   "Define a brain template using vertices and faces"
+  ],
+  [
+   "03_sources.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add sources to the scene. This script also illustrate most of the controls for sources. Each source is defined by a (x, y, z) MNI coordinate. Then, we can attach some data to sources and project this activity onto the surface (cortical projection). Alternatively, you can run the cortical repartition which is defined as the number of contributing sources per vertex.",
+   "Add deep sources"
+  ],
+  [
+   "05_region_of_interest.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to display Region Of Interest (ROI).",
+   "Add Region of interest (ROI)"
+  ],
+  [
+   "08_screenshot.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Offline rendering of selected canvas.",
+   "Screenshot example"
+  ],
+  [
+   "11_add_vectors.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add vectors to the scene. This example demonstrate the two methods to defined vectors :",
+   "Add vectors"
+  ],
+  [
+   "12_parcellize.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Parcellize the brain surface using .annot files. This example use Nibabel to read the .annot file.",
+   "Parcellize brain surface"
+  ],
+  [
+   "conjunction_map.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Display a conjunction map from a nii.gz file (NiBabel required).",
+   "Display conjunction map"
+  ],
+  [
+   "fmri_activation.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Display fMRI activations from a nii.gz file (NiBabel required).",
+   "Display fMRI activation"
+  ],
+  [
+   "meg_inverse_solution.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot MEG inverse solution.",
+   "Plot MEG inverse solution"
+  ],
+  [
+   "source_space.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot from a .fif file using the visbrain.mne.mne_plot_source_space function",
+   "Plot source space"
+  ],
+  [
+   "vector_based_meg_inverse.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot vector-valued MEG inverse solution.",
+   "Plot vector-valued MEG inverse solution"
+  ]
+ ],
+ "visbrain.objects.ColorbarObj": [
+  [
+   "plot_brain_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the brain object i.e :",
+   "Brain object (BrainObj) : complete tutorial"
+  ],
+  [
+   "plot_im_tf_spec_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Use and control image, time-frequency maps and spectrogram.",
+   "Image, time-frequency map and spectrogram objects"
+  ],
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ],
+  [
+   "plot_source_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the source object i.e :",
+   "Source object (SourceObj) : complete tutorial"
+  ],
+  [
+   "plot_topo_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the topoplot object i.e :",
+   "Topoplot object (TopoObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.ConnectObj": [
+  [
+   "plot_animate_scene.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to animate objects inside the scene. Note that animations can only be used with 3D objects.",
+   "Animate objects in the scene"
+  ],
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_connectivity_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the connectivity object:",
+   "Connectivity object (ConnectObj) : complete tutorial"
+  ],
+  [
+   "04_connectivity.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Display and customize connectivity. To this end, we define some deep sources and connect them.",
+   "Connect deep sources"
+  ],
+  [
+   "09_add_multiple_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add multiple source's and connectivity object to the scene.",
+   "Add multiple objects to the scene"
+  ]
+ ],
+ "visbrain.objects.CrossSecObj": [
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "01_cross_sections_and_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Control the cross-section panel and the volume using a Nifti file. The nibabel package should also be installed.",
+   "Cross-sections and volume control"
+  ],
+  [
+   "10_add_nifti_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Import a custom Nifti volume that can be then used in the cross-section or volume tab. To this end, the python package nibabel must be installed and custom Nifti volume must be downloaded. When the volume is loaded into the GUI, it's accessible from the Brain/Cross-sections and Brain/Volume tab.",
+   "Add Nifti volume"
+  ]
+ ],
+ "visbrain.objects.GridSignalsObj": [
+  [
+   "plot_gridsignals_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the grid of time-series object i.e :",
+   "Grid of signals object (GridSignalsObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.ImageObj": [
+  [
+   "plot_im_tf_spec_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Use and control image, time-frequency maps and spectrogram.",
+   "Image, time-frequency map and spectrogram objects"
+  ]
+ ],
+ "visbrain.objects.PacmapObj": [
+  [
+   "plot_pac_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "The PAC measure the degree of coupling between the phase of slow oscillations and the amplitude of fatser oscillations. To compute PAC, you'll need to install the tensorpac package (see https://github.com/EtienneCmb/tensorpac).",
+   "Phase-Amplitude Coupling (PAC)  object"
+  ]
+ ],
+ "visbrain.objects.Picture3DObj": [
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_tspic_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main features of 3d time-series and pictures. This include :",
+   "Time-series and pictures 3D (TimeSeries3DObj & Picture3DObj): complete tutorial"
+  ],
+  [
+   "07_add_pictures.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display small pictures attached to sources. The pictures can then be controlled from the GUI in the Sources/Pictures tab.",
+   "Add pictures"
+  ]
+ ],
+ "visbrain.objects.RoiObj": [
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ],
+  [
+   "plot_source_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the source object i.e :",
+   "Source object (SourceObj) : complete tutorial"
+  ],
+  [
+   "05_region_of_interest.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to display Region Of Interest (ROI).",
+   "Add Region of interest (ROI)"
+  ],
+  [
+   "08_screenshot.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Offline rendering of selected canvas.",
+   "Screenshot example"
+  ]
+ ],
+ "visbrain.objects.RoiObj.get_labels": [
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.RoiObj.save": [
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.RoiObj.select_roi": [
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.RoiObj.where_is": [
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.SceneObj": [
+  [
+   "plot_animate_scene.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to animate objects inside the scene. Note that animations can only be used with 3D objects.",
+   "Animate objects in the scene"
+  ],
+  [
+   "plot_brain_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the brain object i.e :",
+   "Brain object (BrainObj) : complete tutorial"
+  ],
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_connectivity_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the connectivity object:",
+   "Connectivity object (ConnectObj) : complete tutorial"
+  ],
+  [
+   "plot_gridsignals_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the grid of time-series object i.e :",
+   "Grid of signals object (GridSignalsObj) : complete tutorial"
+  ],
+  [
+   "plot_im_tf_spec_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Use and control image, time-frequency maps and spectrogram.",
+   "Image, time-frequency map and spectrogram objects"
+  ],
+  [
+   "plot_pac_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "The PAC measure the degree of coupling between the phase of slow oscillations and the amplitude of fatser oscillations. To compute PAC, you'll need to install the tensorpac package (see https://github.com/EtienneCmb/tensorpac).",
+   "Phase-Amplitude Coupling (PAC)  object"
+  ],
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ],
+  [
+   "plot_source_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the source object i.e :",
+   "Source object (SourceObj) : complete tutorial"
+  ],
+  [
+   "plot_topo_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the topoplot object i.e :",
+   "Topoplot object (TopoObj) : complete tutorial"
+  ],
+  [
+   "plot_tspic_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main features of 3d time-series and pictures. This include :",
+   "Time-series and pictures 3D (TimeSeries3DObj & Picture3DObj): complete tutorial"
+  ],
+  [
+   "plot_volume_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the volume object :",
+   "Volume object (VolumeObj) : complete tutorial"
+  ],
+  [
+   "plot_x3d_files.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to plot .x3d files. 6 brain templates are going to be downloaded (total of 26.3Mo). Additional templates can be downloaded from : https://scalablebrainatlas.incf.org",
+   "Plot x3d files"
+  ]
+ ],
+ "visbrain.objects.SourceObj": [
+  [
+   "plot_animate_scene.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate how to animate objects inside the scene. Note that animations can only be used with 3D objects.",
+   "Animate objects in the scene"
+  ],
+  [
+   "plot_brain_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the brain object i.e :",
+   "Brain object (BrainObj) : complete tutorial"
+  ],
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_connectivity_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the connectivity object:",
+   "Connectivity object (ConnectObj) : complete tutorial"
+  ],
+  [
+   "plot_roi_object.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the roi object i.e :",
+   "Region Of Interest object (RoiObj) : complete tutorial"
+  ],
+  [
+   "plot_source_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the source object i.e :",
+   "Source object (SourceObj) : complete tutorial"
+  ],
+  [
+   "03_sources.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add sources to the scene. This script also illustrate most of the controls for sources. Each source is defined by a (x, y, z) MNI coordinate. Then, we can attach some data to sources and project this activity onto the surface (cortical projection). Alternatively, you can run the cortical repartition which is defined as the number of contributing sources per vertex.",
+   "Add deep sources"
+  ],
+  [
+   "04_connectivity.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Display and customize connectivity. To this end, we define some deep sources and connect them.",
+   "Connect deep sources"
+  ],
+  [
+   "05_region_of_interest.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example illustrate how to display Region Of Interest (ROI).",
+   "Add Region of interest (ROI)"
+  ],
+  [
+   "06_add_time_series.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display time-series attached to sources. The time-series can then be controlled from the GUI in the Sources/Time-series tab.",
+   "Add time series"
+  ],
+  [
+   "07_add_pictures.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display small pictures attached to sources. The pictures can then be controlled from the GUI in the Sources/Pictures tab.",
+   "Add pictures"
+  ],
+  [
+   "08_screenshot.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Offline rendering of selected canvas.",
+   "Screenshot example"
+  ],
+  [
+   "09_add_multiple_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add multiple source's and connectivity object to the scene.",
+   "Add multiple objects to the scene"
+  ],
+  [
+   "10_add_nifti_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Import a custom Nifti volume that can be then used in the cross-section or volume tab. To this end, the python package nibabel must be installed and custom Nifti volume must be downloaded. When the volume is loaded into the GUI, it's accessible from the Brain/Cross-sections and Brain/Volume tab.",
+   "Add Nifti volume"
+  ],
+  [
+   "11_add_vectors.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add vectors to the scene. This example demonstrate the two methods to defined vectors :",
+   "Add vectors"
+  ],
+  [
+   "source_space.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot from a .fif file using the visbrain.mne.mne_plot_source_space function",
+   "Plot source space"
+  ]
+ ],
+ "visbrain.objects.TimeFrequencyObj": [
+  [
+   "plot_im_tf_spec_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Use and control image, time-frequency maps and spectrogram.",
+   "Image, time-frequency map and spectrogram objects"
+  ]
+ ],
+ "visbrain.objects.TimeSeries3DObj": [
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_tspic_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main features of 3d time-series and pictures. This include :",
+   "Time-series and pictures 3D (TimeSeries3DObj & Picture3DObj): complete tutorial"
+  ],
+  [
+   "06_add_time_series.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "This example demonstrate how to display time-series attached to sources. The time-series can then be controlled from the GUI in the Sources/Time-series tab.",
+   "Add time series"
+  ]
+ ],
+ "visbrain.objects.TopoObj": [
+  [
+   "plot_topo_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the topoplot object i.e :",
+   "Topoplot object (TopoObj) : complete tutorial"
+  ]
+ ],
+ "visbrain.objects.VectorObj": [
+  [
+   "11_add_vectors.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Add vectors to the scene. This example demonstrate the two methods to defined vectors :",
+   "Add vectors"
+  ],
+  [
+   "vector_based_meg_inverse.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/eeg_meg",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/eeg_meg",
+   "Plot vector-valued MEG inverse solution.",
+   "Plot vector-valued MEG inverse solution"
+  ]
+ ],
+ "visbrain.objects.VolumeObj": [
+  [
+   "plot_volume_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main functionalities and inputs of the volume object :",
+   "Volume object (VolumeObj) : complete tutorial"
+  ],
+  [
+   "01_cross_sections_and_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Control the cross-section panel and the volume using a Nifti file. The nibabel package should also be installed.",
+   "Cross-sections and volume control"
+  ],
+  [
+   "10_add_nifti_volume.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_brain",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_brain",
+   "Import a custom Nifti volume that can be then used in the cross-section or volume tab. To this end, the python package nibabel must be installed and custom Nifti volume must be downloaded. When the volume is loaded into the GUI, it's accessible from the Brain/Cross-sections and Brain/Volume tab.",
+   "Add Nifti volume"
+  ]
+ ],
+ "visbrain.utils.generate_eeg": [
+  [
+   "plot_combine_objects.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the feasibility to combine multiple objects in the same scene.",
+   "Combine multiple objects"
+  ],
+  [
+   "plot_gridsignals_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "This example illustrate the main functionalities and inputs of the grid of time-series object i.e :",
+   "Grid of signals object (GridSignalsObj) : complete tutorial"
+  ],
+  [
+   "plot_tspic_obj.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/objects",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/objects",
+   "Illustration of the main features of 3d time-series and pictures. This include :",
+   "Time-series and pictures 3D (TimeSeries3DObj & Picture3DObj): complete tutorial"
+  ],
+  [
+   "00_1d_signal.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Plot a basic vector. Then, you can visualize this vector as a continuous line, markers, histogram or compute the time-frequency map or power spectrum density (PSD).",
+   "Plot a 1D signal"
+  ],
+  [
+   "01_2d_signals.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Dispose a two dimensional array of data into a grid.",
+   "Plot a 2D array of data"
+  ],
+  [
+   "02_3d_signals.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Plot and inspect a 3D array of data.",
+   "Plot a 3D array of data"
+  ],
+  [
+   "03_interface_customization.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Use custom color, font size...",
+   "Interface customization"
+  ],
+  [
+   "04_annotations.py",
+   "/home/erik/Documents/code/visbrain/docs/../examples/gui_signal",
+   "/home/erik/Documents/code/visbrain/docs/auto_examples/gui_signal",
+   "Import annotations from a text file and annotate trials.",
+   "Import, save and add annotations"
+  ]
+ ]
+}

@@ -1,0 +1,84 @@
+
+
+Examples using ``visbrain.objects.Picture3DObj``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrate the feasibility to combine multiple objects in the same scene.">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_combine_objects_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_combine_objects.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Combine multiple objects</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_combine_objects.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Illustration of the main features of 3d time-series and pictures. This include :">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_tspic_obj_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_tspic_obj.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Time-series and pictures 3D (TimeSeries3DObj & Picture3DObj): complete tutorial</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_tspic_obj.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrate how to display small pictures attached to sources. The pictures can then be controlled from the GUI in the Sources/Pictures tab.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_07_add_pictures_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_07_add_pictures.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add pictures</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_07_add_pictures.py`
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+

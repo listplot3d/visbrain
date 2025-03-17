@@ -1,0 +1,42 @@
+
+
+Examples using ``visbrain.mne.mne_plot_source_space``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot from a .fif file using the visbrain.mne.mne_plot_source_space function">
+
+.. only:: html
+
+  .. image:: /auto_examples/eeg_meg/images/thumb/sphx_glr_source_space_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_eeg_meg_source_space.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot source space</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_eeg_meg_source_space.py`
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+

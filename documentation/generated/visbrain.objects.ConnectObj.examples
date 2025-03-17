@@ -1,0 +1,126 @@
+
+
+Examples using ``visbrain.objects.ConnectObj``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrate how to animate objects inside the scene. Note that animations can only be used with 3D objects.">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_animate_scene_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_animate_scene.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Animate objects in the scene</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_animate_scene.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrate the feasibility to combine multiple objects in the same scene.">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_combine_objects_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_combine_objects.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Combine multiple objects</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_combine_objects.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Illustration of the main functionalities and inputs of the connectivity object:">
+
+.. only:: html
+
+  .. image:: /auto_examples/objects/images/thumb/sphx_glr_plot_connectivity_obj_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_objects_plot_connectivity_obj.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Connectivity object (ConnectObj) : complete tutorial</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_objects_plot_connectivity_obj.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Display and customize connectivity. To this end, we define some deep sources and connect them.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_04_connectivity_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_04_connectivity.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Connect deep sources</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_04_connectivity.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Add multiple source&#x27;s and connectivity object to the scene.">
+
+.. only:: html
+
+  .. image:: /auto_examples/gui_brain/images/thumb/sphx_glr_09_add_multiple_objects_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_gui_brain_09_add_multiple_objects.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Add multiple objects to the scene</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_gui_brain_09_add_multiple_objects.py`
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
