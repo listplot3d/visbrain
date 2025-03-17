@@ -1,0 +1,37 @@
+﻿visbrain.objects.TimeSeries3DObj
+================================
+
+.. currentmodule:: visbrain.objects
+
+.. autoclass:: TimeSeries3DObj
+   :exclude-members: __init__, set_shortcuts_to_canvas, to_dict, to_kwargs, update, update_from_dict, describe_tree
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: TimeSeries3DObj
+   
+      ~TimeSeries3DObj.__init__
+      ~TimeSeries3DObj.animate
+      ~TimeSeries3DObj.copy
+      ~TimeSeries3DObj.describe_tree
+      ~TimeSeries3DObj.preview
+      ~TimeSeries3DObj.record_animation
+      ~TimeSeries3DObj.render
+      ~TimeSeries3DObj.screenshot
+      ~TimeSeries3DObj.set_shortcuts_to_canvas
+      ~TimeSeries3DObj.to_dict
+      ~TimeSeries3DObj.to_kwargs
+      ~TimeSeries3DObj.update
+      ~TimeSeries3DObj.update_from_dict
+   
+   
+
+.. include:: visbrain.objects.TimeSeries3DObj.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

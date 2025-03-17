@@ -1,0 +1,37 @@
+﻿visbrain.objects.VectorObj
+==========================
+
+.. currentmodule:: visbrain.objects
+
+.. autoclass:: VectorObj
+   :exclude-members: __init__, set_shortcuts_to_canvas, to_dict, to_kwargs, update, update_from_dict, describe_tree
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: VectorObj
+   
+      ~VectorObj.__init__
+      ~VectorObj.animate
+      ~VectorObj.copy
+      ~VectorObj.describe_tree
+      ~VectorObj.preview
+      ~VectorObj.record_animation
+      ~VectorObj.render
+      ~VectorObj.screenshot
+      ~VectorObj.set_shortcuts_to_canvas
+      ~VectorObj.to_dict
+      ~VectorObj.to_kwargs
+      ~VectorObj.update
+      ~VectorObj.update_from_dict
+   
+   
+
+.. include:: visbrain.objects.VectorObj.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>
