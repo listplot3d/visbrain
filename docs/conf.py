@@ -64,7 +64,7 @@ autodoc_default_flags = ['members', 'inherited-members', 'no-undoc-members']
 sphinx_gallery_conf = {
     # path to your examples scripts
     'examples_dirs': '../examples',
-    'sphinx_gallery': None,
+    'plot_gallery': None,
     'reference_url': {
         'visbrain': None,
         'matplotlib': 'http://matplotlib.org',
@@ -392,8 +392,8 @@ texinfo_documents = [
 # Source code links (adapted from SciPy (doc/source/conf.py))
 # -----------------------------------------------------------------------------
 
-def setup(app):
-    app.add_stylesheet("visbrain_styles.css")
+#def setup(app):
+ #   app.add_stylesheet("visbrain_styles.css")
 
 
 def linkcode_resolve(domain, info):
