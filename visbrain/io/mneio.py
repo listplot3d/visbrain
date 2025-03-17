@@ -61,6 +61,8 @@ def mne_switch(file, ext, downsample, preload=True, **kwargs):
         raw = io.read_raw_cnt(path, **kwargs)
     elif ext.lower() == '.vhdr':  # BrainVision
         raw = io.read_raw_brainvision(path, **kwargs)
+    elif ext.lower() == '.fif': #nifti MEG
+        raw = io.read_raw_fif(path, on_split_missing = 'ignore', **kwargs)
     else:
         raise IOError("File not supported by mne-python.")
 
