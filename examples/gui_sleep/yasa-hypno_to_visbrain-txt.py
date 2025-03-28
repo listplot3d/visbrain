@@ -8,7 +8,7 @@ import time
 # Import visbrain's hypnogram data read/write module
 from visbrain.io import write_hypno
 from visbrain.gui import Sleep
-
+from visbrain.io.rw_hypno import _write_hypno_txt_sample
 
 
 def generate_visbrain_hypnogram(edf_file, output_dir):
@@ -34,8 +34,14 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     edf_name = os.path.splitext(edf_basename)[0]
     
     # Set output file paths
-    hypno_output_path = os.path.join(output_dir, f"{edf_name}_hypo.txt")
-    hypno_desc_output_path = os.path.join(output_dir, f"{edf_name}_hypo_description.txt")
+    hypno_output_path = os.path.join(output_dir, f"{edf_name}_hypno.txt")
+    hypno_desc_output_path = os.path.join(output_dir, f"{edf_name}_hypno_description.txt")
+    
+    # Remove existing files if they exist
+    if os.path.exists(hypno_output_path):
+        os.remove(hypno_output_path)
+    if os.path.exists(hypno_desc_output_path):
+        os.remove(hypno_desc_output_path)
     
     # Read EDF file
     raw = mne.io.read_raw_edf(edf_file, preload=True)
@@ -60,11 +66,11 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     
     # YASA to visbrain stage name conversion
     yasa_to_visbrain = {
-        'W': 'W',
+        'WAKE': 'W',
         'N1': 'N1',
         'N2': 'N2',
         'N3': 'N3',
-        'R': 'REM'
+        'REM': 'REM'
     }
     
     # Convert YASA predictions to visbrain numeric format
@@ -78,20 +84,13 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     hypno_array = np.array(y_pred_visbrain)
     print(f"Converted to visbrain format. Hypnogram array shape: {hypno_array.shape}")
     
-    # Calculate time vector, each point corresponds to a sleep stage
-    epoch_duration = 30  # Duration of each sleep stage epoch (seconds)
-    time_vector = np.arange(0, len(hypno_array) * epoch_duration, epoch_duration)
-    print(f"Time vector created. Length: {len(time_vector)}")
-    
-    # Use version='time' mode to save sleep stage data
-    print("Writing hypnogram using 'time' version...")
-    write_hypno(hypno_output_path, hypno_array, version='time', 
-                window=epoch_duration, time=time_vector, 
-                hstates=hstates, hvalues=hvalues)
+    # Use the built-in function to write the hypnogram
+    print("Writing hypnogram using built-in function...")
+    _write_hypno_txt_sample(hypno_output_path, hypno_array, hstates, hvalues)
     
     # Write description file, including time information and sleep stage correspondence
     with open(hypno_desc_output_path, 'w') as f:
-        f.write(f"time {epoch_duration}\n")
+        f.write(f"time 30\n")
         for state, value in zip(hstates, hvalues):
             f.write(f"{state} {value}\n")
     
