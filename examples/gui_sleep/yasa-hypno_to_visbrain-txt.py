@@ -13,14 +13,33 @@ from visbrain.io.rw_hypno import _write_hypno_txt_sample
 
 def generate_visbrain_hypnogram(edf_file, output_dir):
     """Generate visbrain-compatible hypnogram files from an EDF file.
-    
+
     Parameters
     ----------
     edf_file : str
         Path to the EDF file containing EEG data
     output_dir : str
         Directory where output files will be saved
-    
+
+
+    Potential internal configs:
+    ----------
+    eeg_name : str
+        Name of the EEG channel
+    metadata : dict
+        Metadata dictionary containing patient information
+    hstates : list[str]
+        List of vigilance state labels.
+    hvalues : list[int]
+        Hypnogram value for each vigilance state.
+    version : str
+        Version of the hypnogram format. 'sample' or 'time'.
+    window : int
+        Window size in seconds.
+    sf : int
+        Sampling frequency per device
+
+
     Returns
     -------
     tuple
@@ -84,13 +103,14 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     hypno_array = np.array(y_pred_visbrain)
     print(f"Converted to visbrain format. Hypnogram array shape: {hypno_array.shape}")
     
+    epoch_window = 30
     # Use the built-in function to write the hypnogram
     print("Writing hypnogram using built-in function...")
-    _write_hypno_txt_sample(hypno_output_path, hypno_array, hstates, hvalues)
-    
+    write_hypno(hypno_output_path, hypno_array, version='sample', window=epoch_window, #<-----only config parms this line
+                sf=raw.info['sfreq'], npts=len(raw.times), hstates=hstates, hvalues=hvalues)
     # Write description file, including time information and sleep stage correspondence
     with open(hypno_desc_output_path, 'w') as f:
-        f.write(f"time 30\n")
+        f.write(f"time {epoch_window}\n")
         for state, value in zip(hstates, hvalues):
             f.write(f"{state} {value}\n")
     
