@@ -3,9 +3,12 @@ import yasa
 import numpy as np
 import os
 import argparse
+import time
 
 # Import visbrain's hypnogram data read/write module
 from visbrain.io import write_hypno
+from visbrain.gui import Sleep
+
 
 
 def generate_visbrain_hypnogram(edf_file, output_dir):
@@ -101,17 +104,17 @@ def main():
     default_edf_file = "D:/data/my_trails/tmp1/TGAM_sleepdata_sample.edf"
     default_output_dir = "D:/data/my_trails/tmp1/"
     
-    # Get EDF file path from user
-    edf_file = input(f"Enter EDF file path [default: {default_edf_file}]: ").strip()
-    if not edf_file:
-        edf_file = default_edf_file
-        print(f"Using default EDF file: {default_edf_file}")
+    # # Get EDF file path from user
+    # edf_file = input(f"Enter EDF file path [default: {default_edf_file}]: ").strip()
+    # if not edf_file:
+    edf_file = default_edf_file
+    #     print(f"Using default EDF file: {default_edf_file}")
     
-    # Get output directory from user
-    output_dir = input(f"Enter output directory [default: {default_output_dir}]: ").strip()
-    if not output_dir:
-        output_dir = default_output_dir
-        print(f"Using default output directory: {default_output_dir}")
+    # # Get output directory from user
+    # output_dir = input(f"Enter output directory [default: {default_output_dir}]: ").strip()
+    # if not output_dir:
+    output_dir = default_output_dir
+    #     print(f"Using default output directory: {default_output_dir}")
     
     # Validate EDF file exists
     if not os.path.isfile(edf_file):
@@ -126,6 +129,9 @@ def main():
         print(f"\nFiles generated successfully:")
         print(f"1. {hypno_file}")
         print(f"2. {desc_file}")
+
+        time.sleep(3)
+        Sleep(data=edf_file, hypno=hypno_file).show()
     except Exception as e:
         print(f"Error generating hypnogram files: {str(e)}")
         # Capture and print detailed exception information
