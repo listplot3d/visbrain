@@ -69,6 +69,14 @@ class UiMenu(HelpMenu):
         self.q_widget.setVisible(True)
         # Spectrogram :
         self.menuDispSpec.triggered.connect(self._disptog_spec)
+        
+        # Custom Metrics:
+        self.menuDispCustomMetrics = QtWidgets.QAction(self)
+        self.menuDispCustomMetrics.setCheckable(True)
+        self.menuDispCustomMetrics.setText("Custom Metrics")
+        self.menuDispCustomMetrics.triggered.connect(self._disptog_custommetrics)
+        self.menuDisplay.addAction(self.menuDispCustomMetrics)
+        
         # Hypnogram :
         self.menuDispHypno.triggered.connect(self._disptog_hyp)
         # Time axis :
@@ -553,6 +561,16 @@ class UiMenu(HelpMenu):
         self._SpecW.setVisible(viz)
         self._specLabel.setVisible(viz)
 
+    def _disptog_custommetrics(self):
+        """Toggle method for display / hide the custom metrics.
+
+        Shortcut : C
+        """
+        viz = self.menuDispCustomMetrics.isChecked()
+        self._CustomW.setVisible(viz)
+        self._customLabel.setVisible(viz)
+        self._fcn_grid_toggle()
+
     def _disptog_hyp(self):
         """Toggle method for display / hide the hypnogram.
 
@@ -640,3 +658,7 @@ class UiMenu(HelpMenu):
         self._TimeAxis.mesh.visible = not active_indic
 
         self._fcn_slider_settings()
+
+    def initialize_custommetrics_menu(self):
+        """Initialize custom metrics menu."""
+        pass

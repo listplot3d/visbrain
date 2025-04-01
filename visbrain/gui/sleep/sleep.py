@@ -246,6 +246,9 @@ class Sleep(_PyQtModule, ReadSleepData, UiInit, Visuals, UiElements,
         # ------------------- Spectrogram -------------------
         self._speccam = FixedCam()  # viscam.PanZoomCamera()
         self._specCanvas.set_camera(self._speccam)
+        # ------------------- Custom Metrics -------------------
+        self._customcam = FixedCam()  # viscam.PanZoomCamera()
+        self._customCanvas.set_camera(self._customcam)
         # ------------------- Hypnogram -------------------
         self._hypcam = FixedCam()  # viscam.PanZoomCamera()
         self._hypCanvas.set_camera(self._hypcam)
@@ -257,8 +260,8 @@ class Sleep(_PyQtModule, ReadSleepData, UiInit, Visuals, UiElements,
         self._TimeAxis.set_camera(self._timecam)
 
         # Keep all cams :
-        self._allCams = (self._chanCam, self._speccam, self._hypcam,
-                         self._topocam, self._timecam)
+        self._allCams = (self._chanCam, self._speccam, self._customcam, self._hypcam,
+                          self._topocam, self._timecam)
 
     def _fcns_on_creation(self):
         """Applied on creation."""
@@ -273,8 +276,10 @@ class Sleep(_PyQtModule, ReadSleepData, UiInit, Visuals, UiElements,
         self._fcn_info_update()
         self._fcn_hypno_to_score()
         self._fcn_hypoverlay_update()
+        self.initialize_custommetrics_menu()
         # Set objects visible :
         self._SpecW.setVisible(True)
+        self._CustomW.setVisible(True)
         self._HypW.setVisible(True)
         self._TimeAxisW.setVisible(True)
         self._videoW.setVisible(False)

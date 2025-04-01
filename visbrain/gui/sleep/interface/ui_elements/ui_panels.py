@@ -102,13 +102,32 @@ class UiPanels(object):
         PROFILER("Spectrogram", level=2)
 
         # =====================================================================
+        # CUSTOM METRICS
+        # =====================================================================
+        # Main canvas for the custom metrics :
+        self._customCanvas = AxisCanvas(axis=self._ax, name='CustomMetrics',
+                                      fcn=[self.on_mouse_wheel])
+        self._CustomW, self._CustomLayout = self._create_compatible_w("CustomW",
+                                                                      "CustomL")
+        self._CustomLayout.addWidget(self._customCanvas.canvas.native)
+        # 修改位置：将CustomMetrics放在Spectrogram下方 (行号+1)
+        self._chanGrid.addWidget(self._CustomW, len(self) + 2, 1, 1, 1)
+        # Add label :
+        self._customLabel = QtWidgets.QLabel(self.centralwidget)
+        self._customLabel.setText(self._addspace + "Custom Metrics")
+        self._customLabel.setFont(self._font)
+        self._chanGrid.addWidget(self._customLabel, len(self) + 2, 0, 1, 1)
+        PROFILER("CustomMetrics", level=2)
+
+        # =====================================================================
         # HYPNOGRAM
         # =====================================================================
         self._hypCanvas = AxisCanvas(axis=self._ax, name='Hypnogram',
                                      fcn=[self.on_mouse_wheel], use_pad=True)
         self._HypW, self._HypLayout = self._create_compatible_w("HypW", "HypL")
         self._HypLayout.addWidget(self._hypCanvas.canvas.native)
-        self._chanGrid.addWidget(self._HypW, len(self) + 2, 1, 1, 1)
+        # 修改位置：将Hypnogram放在CustomMetrics下方 (行号+1)
+        self._chanGrid.addWidget(self._HypW, len(self) + 3, 1, 1, 1)
         # Add label :
         self._hypLabel = QtWidgets.QWidget()
         layout = QtWidgets.QVBoxLayout(self._hypLabel)
@@ -127,7 +146,7 @@ class UiPanels(object):
             label.setFont(self._font)
             layout.addWidget(label)
             self._hypYLabels.append(label)
-        self._chanGrid.addWidget(self._hypLabel, len(self) + 2, 0, 1, 1)
+        self._chanGrid.addWidget(self._hypLabel, len(self) + 3, 0, 1, 1)
         PROFILER("Hypnogram", level=2)
         # Connect :
         self._PanHypnoReset.clicked.connect(self._fcn_hypno_clean)
@@ -171,12 +190,13 @@ class UiPanels(object):
         self._TimeLayout.addWidget(self._TimeAxis.canvas.native)
         self._TimeAxisW.setMaximumHeight(400)
         self._TimeAxisW.setMinimumHeight(50)
-        self._chanGrid.addWidget(self._TimeAxisW, len(self) + 3, 1, 1, 1)
+        # 修改位置：将TimeAxis放在Hypnogram下方 (行号+1)
+        self._chanGrid.addWidget(self._TimeAxisW, len(self) + 4, 1, 1, 1)
         # Add label :
         self._timeLabel = QtWidgets.QLabel(self.centralwidget)
         self._timeLabel.setText(self._addspace + 'Time')
         self._timeLabel.setFont(self._font)
-        self._chanGrid.addWidget(self._timeLabel, len(self) + 3, 0, 1, 1)
+        self._chanGrid.addWidget(self._timeLabel, len(self) + 4, 0, 1, 1)
         PROFILER("Time axis", level=2)
 
     # =====================================================================
@@ -491,6 +511,43 @@ class UiPanels(object):
         """Change the 2-D interpolation method."""
         # Interpolation :
         self._spec.interp = str(self._PanSpecInterp.currentText())
+
+    # =====================================================================
+    # CUSTOM METRICS
+    # =====================================================================
+    def _fcn_custom_set_data(self):
+        """Set data to the custom metrics."""
+        # 完全独立，不依赖Spectrogram的控件
+        # 使用固定参数进行初始化
+        nfft = 30.0
+        over = 0.0
+        fstart = 0.5
+        fend = 20.0
+        contrast = 0.5
+        cmap = 'viridis'
+        chan = 0  # 使用第一个通道
+        method = 'Fourier transform'
+        interp = 'nearest'
+        norm = 0
+        
+        # 设置标签显示当前通道
+        self._customLabel.setText(self._addspace + self._channels[chan])
+        
+        # 设置数据
+        self._custom.set_data(self._sf, self._data[chan, ...], self._time,
+                            nfft=nfft, overlap=over, fstart=fstart, fend=fend,
+                            cmap=cmap, contrast=contrast, interp=interp,
+                            norm=norm, method=method)
+
+    def _fcn_custom_compat(self):
+        """Check compatibility between custom metrics parameters."""
+        # 独立实现，目前为空
+        pass
+
+    def _fcn_custom_interp(self):
+        """Change the 2-D interpolation method."""
+        # 独立实现，目前为空
+        pass
 
     # =====================================================================
     # HYPNOGRAM

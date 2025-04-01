@@ -5,8 +5,6 @@ hypnogram, indicator, shortcuts)
 """
 import itertools
 import logging
-from pathlib import Path
-
 import numpy as np
 import scipy.signal as scpsig
 from scipy.stats import rankdata
@@ -523,6 +521,173 @@ class Spectrogram(PrepareData):
             mesh = 20 * np.log10(mesh)
 
             # =================== FREQUENCY SELECTION ===================
+            # Find where freq is [fstart, fend] :
+            f = [0., 0.]
+            f[0] = np.abs(freq - fstart).argmin() if fstart else 0
+            f[1] = np.abs(freq - fend).argmin() if fend else len(freq)
+            # Build slicing and select frequency vector :
+            sls = slice(f[0], f[1] + 1)
+            freq = freq[sls]
+            self._fstart, self._fend = freq[0], freq[-1]
+
+            # =================== COLOR ===================
+            # Get clim :
+            _mesh = mesh[sls, :]
+            is_finite = np.isfinite(_mesh)
+            _mesh[~is_finite] = np.percentile(_mesh[is_finite], 5)
+            contrast = 1. if contrast is None else contrast
+            clim = (contrast * _mesh.min(), contrast * _mesh.max())
+            # Turn mesh into color array for selected frequencies:
+            self.mesh.set_data(_mesh)
+            _min, _max = _mesh.min(), _mesh.max()
+            _cmap = cmap_to_glsl(limits=(_min, _max), clim=clim, cmap=cmap)
+            self.mesh.cmap = _cmap
+            self.mesh.clim = 'auto'
+            self.mesh.interpolation = interp
+
+            # =================== TRANSFORM ===================
+            tm, th = time.min(), time.max()
+            # Re-scale the mesh for fitting in time / frequency :
+            fact = (freq.max() - freq.min()) / len(freq)
+            sc = (th / mesh.shape[1], fact, 1)
+            tr = [0., freq.min(), 0.]
+            self.mesh.transform.translate = tr
+            self.mesh.transform.scale = sc
+            # Update object :
+            self.mesh.update()
+            # Get camera rectangle :
+            self.rect = (tm, freq.min(), th - tm, freq.max() - freq.min())
+            self.freq = freq
+        # Visibility :
+        self.mesh.visible = 0 if method == 'Wavelet' else 1
+        self.tf.visible = 1 if method == 'Wavelet' else 0
+
+    def clean(self):
+        """Clean indicators."""
+        pos = np.zeros((3, 4), dtype=np.float32)
+        self.mesh.set_data(pos)
+        self.mesh.parent = None
+        self.mesh = None
+
+    # ----------- RECT -----------
+    @property
+    def rect(self):
+        """Get the rect value."""
+        return self._rect
+
+    @rect.setter
+    def rect(self, value):
+        """Set rect value."""
+        self._rect = value
+        self._camera.rect = value
+
+    # ----------- INTERP -----------
+    @property
+    def interp(self):
+        """Get the interp value."""
+        return self._interp
+
+    @interp.setter
+    def interp(self, value):
+        """Set interp value."""
+        self._interp = value
+        self.mesh.interpolation = value
+        self.mesh.update()
+        self.tf.interpolation = value
+        self.tf.update()
+
+
+class CustomMetrics(PrepareData):
+    """Create and manage a CustomMetrics object.
+
+    After object creation, use the set_data() method to pass new data, new
+    color, new parameter range, new settings...
+    """
+
+    def __init__(self, camera, parent=None, fcn=None):
+        # Initialize PrepareData :
+        PrepareData.__init__(self, axis=0)
+
+        # Keep camera :
+        self._camera = camera
+        self._rect = (0., 0., 0., 0.)
+        self._fcn = fcn
+
+        # Time-frequency map
+        self.tf = TFmapsMesh(parent=parent)
+        # CustomMetrics
+        self.mesh = scene.visuals.Image(np.zeros((2, 2)), parent=parent,
+                                      name='Custom Metrics')
+        self.mesh.transform = vist.STTransform()
+
+    def set_data(self, sf, data, time, method='Fourier transform',
+                 cmap='rainbow', nfft=30., overlap=0., fstart=.5, fend=20.,
+                 contrast=.5, interp='nearest', norm=0):
+        """Set data to the custom metrics.
+
+        Use this method to change data, colormap, custom metrics settings, the
+        starting and ending parameters.
+
+        Parameters
+        ----------
+        sf: float
+            The sampling frequency.
+        data: array_like
+            The data to use for the custom metrics. Must be a row vector.
+        time: array_like
+            The time vector.
+        method: string | 'Fourier transform'
+            Computation method.
+        cmap : string | 'viridis'
+            The matplotlib colormap to use.
+        nfft : float | 30.
+            Number of fft points for the custom metrics (in seconds).
+        overlap : float | .5
+            Ovelap proprotion (0 <= overlap <1).
+        fstart : float | .5
+            Parameter from which the custom metrics have to start.
+        fend : float | 20.
+            Parameter from which the custom metrics have to finish.
+        contrast : float | .5
+            Contrast of the colormap.
+        interp : string | 'nearest'
+            Interpolation method.
+        norm : int | 0
+            Normalization method for TF.
+        """
+        # =================== PREPARE DATA ===================
+        # Prepare data (only if needed)
+        if self:
+            data = self._prepare_data(sf, data.copy(), time)
+
+        nperseg = int(round(nfft * sf))
+
+        # =================== TF // METRICS ===================
+        if method == 'Wavelet':
+            self.tf.set_data(data, sf, f_min=fstart, f_max=fend, cmap=cmap,
+                             contrast=contrast, n_window=nperseg,
+                             overlap=overlap, window='hamming', norm=norm)
+            self.tf._image.interpolation = interp
+            self.rect = self.tf.rect
+            self.freq = self.tf.freqs
+        else:
+            # =================== CONVERSION ===================
+            overlap = int(round(overlap * nperseg))
+
+            if method == 'Multitaper':
+                from lspopt import spectrogram_lspopt
+                freq, _, mesh = spectrogram_lspopt(data, fs=sf,
+                                                   nperseg=nperseg,
+                                                   c_parameter=20,
+                                                   noverlap=overlap)
+            elif method == 'Fourier transform':
+                freq, _, mesh = scpsig.spectrogram(data, fs=sf,
+                                                   nperseg=nperseg,
+                                                   noverlap=overlap,
+                                                   window='hamming')
+            mesh = 20 * np.log10(mesh)
+
+            # =================== PARAMETER SELECTION ===================
             # Find where freq is [fstart, fend] :
             f = [0., 0.]
             f[0] = np.abs(freq - fstart).argmin() if fstart else 0
@@ -1318,7 +1483,7 @@ class CanvasShortcuts(object):
                 cursor = self._time[0] + self._time[-1] * x_vb / vb_size[0]
             else:
                 val = self._SlVal.value()
-                step = self._SlStep
+                step = self._SigStep
                 win = self._SigWin.value()
                 tm, th = (val * step, val * step + win)
                 cursor = tm + ((th - tm) * x_vb / vb_size[0])
@@ -1479,9 +1644,22 @@ class Visuals(CanvasShortcuts):
         self._specInd.set_data(xlim=(0, 30), ylim=(0, 20))
         PROFILER('Spectrogram indicator', level=1)
 
+        # =================== CUSTOM METRICS ===================
+        # Create a custom metrics object :
+        self._custom = CustomMetrics(camera=cameras[2],
+                                   fcn=self._fcn_custom_set_data,
+                                   parent=self._customCanvas.wc.scene)
+        self._custom.set_data(sf, data[0, ...], time, cmap=self._defcmap)
+        PROFILER('CustomMetrics', level=1)
+        # Create a visual indicator for custom metrics :
+        self._customInd = Indicator(name='custom_indic', visible=True, alpha=.3,
+                                  parent=self._customCanvas.wc.scene)
+        self._customInd.set_data(xlim=(0, 30), ylim=(0, 20))
+        PROFILER('CustomMetrics indicator', level=1)
+
         # =================== HYPNOGRAM ===================
         # Create a hypnogram object :
-        self._hyp = Hypnogram(time, camera=cameras[2], width=self._lwhyp,
+        self._hyp = Hypnogram(time, camera=cameras[3], width=self._lwhyp,
                               hcolors=self._hcolors, hvalues=self._hvalues,
                               hYranks=self._hYranks,
                               parent=self._hypCanvas.wc.scene)
@@ -1506,9 +1684,9 @@ class Visuals(CanvasShortcuts):
         self._topo = TopoSleep(channels=self._channels, margin=.2,
                                parent=self._topoCanvas.wc.scene)
         # Set camera properties :
-        cameras[3].rect = self._topo.rect
-        cameras[3].aspect = 1.
-        self._pan_pick.model().item(3).setEnabled(any(self._topo._keeponly))
+        cameras[4].rect = self._topo.rect
+        cameras[4].aspect = 1.
+        self._pan_pick.model().item(3).setEnabled(any(self._topo._keeponly)) # Changed from 4 to 3
         PROFILER('Topoplot', level=1)
 
         # =================== VIDEO ===================
