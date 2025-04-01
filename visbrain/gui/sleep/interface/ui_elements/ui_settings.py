@@ -254,6 +254,13 @@ class UiSettings(object):
             self._specInd.set_data(xlim=xlim, ylim=ylim)
 
         # ---------------------------------------
+        # Update custom metrics indicator :
+        if is_indic_checked and not iszoom:
+            # 使用与spectrogram相同的频率范围
+            ylim = (0.5, 20.0)  # 使用_fcn_custom_set_data中定义的固定值
+            self._customInd.set_data(xlim=xlim, ylim=ylim)
+
+        # ---------------------------------------
         # Update hypnogram indicator :
         if is_indic_checked and not iszoom:
             self._hypInd.set_data(xlim=xlim, ylim=(-6., 2.))
