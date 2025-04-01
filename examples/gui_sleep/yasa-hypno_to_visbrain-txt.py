@@ -25,7 +25,7 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     Potential internal configs:
     ----------
     eeg_name : str
-        Name of the EEG channel
+        Name of the EEG channel if edf has multiple channels
     metadata : dict
         Metadata dictionary containing patient information
     hstates : list[str]
