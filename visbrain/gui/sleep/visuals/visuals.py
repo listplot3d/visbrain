@@ -18,6 +18,7 @@ from visbrain.utils import PrepareData, cmap_to_glsl, color2vb
 from visbrain.utils.sleep.event import _index_to_events
 from visbrain.visuals import TFmapsMesh, TopoMesh
 from vispy import scene
+import matplotlib.pyplot as plt
 
 from .marker import Markers
 
@@ -615,10 +616,18 @@ class CustomMetrics(PrepareData):
 
         # Time-frequency map
         self.tf = TFmapsMesh(parent=parent)
-        # CustomMetrics
+        # Image mesh for CustomMetrics (for heatmap display)
         self.mesh = scene.visuals.Image(np.zeros((2, 2)), parent=parent,
                                       name='Custom Metrics')
         self.mesh.transform = vist.STTransform()
+        
+        # Create Line object for curve display
+        self.line = scene.visuals.Line(pos=np.zeros((2, 2)), parent=parent,
+                                       name='Beta Ratio Line', 
+                                       width=2.0, antialias=True,
+                                       color='yellow')
+        self.line.transform = vist.STTransform()
+        self.line.visible = False  # Default invisible
 
     def set_data(self, sf, data, time, method='Fourier transform',
                  cmap='rainbow', nfft=30., overlap=0., fstart=.5, fend=20.,
@@ -728,6 +737,142 @@ class CustomMetrics(PrepareData):
         # Visibility :
         self.mesh.visible = 0 if method == 'Wavelet' else 1
         self.tf.visible = 1 if method == 'Wavelet' else 0
+
+    def set_curve_data(self, curve_data, time, ylim=(0, 1), cmap='plasma'):
+        """Display beta power ratio as a curve.
+
+        Parameters
+        ----------
+        curve_data : array_like
+            Data to display as a curve, length should be the same as time
+        time : array_like
+            Time vector
+        ylim : tuple
+            Y-axis range
+        cmap : string
+            Matplotlib colormap name, used to set line color
+        """
+        # Ensure no NaN or Inf values
+        curve_data = np.nan_to_num(curve_data, nan=0.0, posinf=1.0, neginf=0.0)
+        
+        # Create vertex positions
+        pos = np.zeros((len(curve_data), 2))
+        pos[:, 0] = time
+        pos[:, 1] = curve_data
+        
+        # Set data to line object
+        self.line.set_data(pos=pos)
+        
+        # Generate colors
+        colors = np.zeros((len(curve_data), 4))
+        cmap_obj = plt.get_cmap(cmap)
+        for i, val in enumerate(curve_data):
+            # Map value to 0-1 range
+            norm_val = (val - ylim[0]) / (ylim[1] - ylim[0]) if ylim[1] > ylim[0] else 0.5
+            norm_val = min(max(norm_val, 0), 1)  # Limit to 0-1 range
+            colors[i, :] = cmap_obj(norm_val)
+        
+        # Set colors
+        self.line.set_data(pos=pos, color=colors)
+        
+        # Update camera rectangle
+        time_min, time_max = time.min(), time.max()
+        y_min, y_max = ylim
+        time_range = time_max - time_min
+        y_range = y_max - y_min
+        
+        # Add some extra space to y-axis (10% top, 5% bottom)
+        y_padding_top = y_range * 0.1
+        y_padding_bottom = y_range * 0.05
+        
+        self.rect = (time_min, y_min - y_padding_bottom, 
+                    time_range, y_range + y_padding_top + y_padding_bottom)
+        
+        # Set visibility
+        self.mesh.visible = False
+        self.tf.visible = False
+        self.line.visible = True
+
+    def set_custom_data(self, data_2d, sf, time, freq_range=(13.0, 30.0),
+                        cmap='plasma', contrast=0.5, interp='bilinear'):
+        """Set custom data to CustomMetrics display.
+
+        This method is specifically used to display pre-computed custom metrics data,
+        unlike the set_data method, it does not perform frequency computation, but directly uses the provided 2D data.
+
+        Parameters
+        ----------
+        data_2d : array_like
+            Preprocessed 2D data array, directly used for display
+        sf : float
+            Sampling frequency
+        time : array_like
+            Time vector
+        freq_range : tuple
+            Displayed frequency range, in the form (min_freq, max_freq)
+        cmap : string
+            Matplotlib colormap name
+        contrast : float
+            Color mapping contrast
+        interp : string
+            Interpolation method
+        """
+        # Get frequency range
+        fmin, fmax = freq_range
+        
+        # Get data minimum and maximum values for color mapping
+        is_finite = np.isfinite(data_2d)
+        if not np.any(is_finite):
+            # Handle all NaN values
+            data_2d = np.zeros_like(data_2d)
+            clim = (0, 1)
+        else:
+            # Replace non-finite values with finite values' median
+            finite_median = np.nanmedian(data_2d[is_finite])
+            data_2d[~is_finite] = finite_median
+            
+            # Set color range
+            _min, _max = data_2d.min(), data_2d.max()
+            clim = (contrast * _min, contrast * _max)
+        
+        # Set data to mesh object
+        self.mesh.set_data(data_2d)
+        
+        # Set color mapping
+        _cmap = cmap_to_glsl(limits=(data_2d.min(), data_2d.max()), 
+                             clim=clim, cmap=cmap)
+        self.mesh.cmap = _cmap
+        self.mesh.clim = 'auto'
+        self.mesh.interpolation = interp
+        
+        # Set transformation to fit time and frequency range
+        tm, th = time.min(), time.max()
+        
+        # Calculate scaling factor
+        freq_height = fmax - fmin
+        time_width = th - tm
+        
+        # If data_2d shape does not match the display range, scale it
+        sc = (time_width / data_2d.shape[1], 
+              freq_height / data_2d.shape[0], 1)
+        
+        # Set transformation
+        tr = [tm, fmin, 0.]
+        self.mesh.transform.translate = tr
+        self.mesh.transform.scale = sc
+        
+        # Update mesh object
+        self.mesh.update()
+        
+        # Set camera rectangle
+        self.rect = (tm, fmin, time_width, freq_height)
+        
+        # Store frequency vector
+        self.freq = np.linspace(fmin, fmax, data_2d.shape[0])
+        
+        # Set visibility
+        self.mesh.visible = True
+        self.tf.visible = False
 
     def clean(self):
         """Clean indicators."""

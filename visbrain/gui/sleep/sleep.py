@@ -114,6 +114,7 @@ class Sleep(_PyQtModule, ReadSleepData, UiInit, Visuals, UiElements,
         # ====================== VARIABLES ======================
         # Check all data :
         self._config_file = config_file
+        self._annot_file = annotations
         self._annot_mark = np.array([])
         self._ax = axis
         # ---------- Default line width ----------
@@ -277,6 +278,8 @@ class Sleep(_PyQtModule, ReadSleepData, UiInit, Visuals, UiElements,
         self._fcn_hypno_to_score()
         self._fcn_hypoverlay_update()
         self.initialize_custommetrics_menu()
+        # 初始化CustomMetrics的显示内容（计算β波功率比）
+        self._fcn_custom_set_data()
         # Set objects visible :
         self._SpecW.setVisible(True)
         self._CustomW.setVisible(True)

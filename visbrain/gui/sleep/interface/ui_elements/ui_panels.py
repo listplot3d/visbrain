@@ -520,27 +520,83 @@ class UiPanels(object):
     # =====================================================================
     def _fcn_custom_set_data(self):
         """Set data to the custom metrics."""
-        # 完全独立，不依赖Spectrogram的控件
-        # 使用固定参数进行初始化
+        print("Computing beta power ratio...")
+        
+        # Set parameters
         nfft = 30.0
         over = 0.0
-        fstart = 0.5
-        fend = 20.0
-        contrast = 0.5
-        cmap = 'viridis'
-        chan = 0  # 使用第一个通道
-        method = 'Fourier transform'
-        interp = 'nearest'
-        norm = 0
+        chan = 0  # Use the first channel
+        cmap = 'plasma'  # Use plasma colormap, better for ratio visualization
         
-        # 设置标签显示当前通道
-        self._customLabel.setText(self._addspace + self._channels[chan])
+        # Set label to display current channel and metric type
+        self._customLabel.setText(self._addspace + f"{self._channels[chan]} - Beta Power Ratio")
         
-        # 设置数据
-        self._custom.set_data(self._sf, self._data[chan, ...], self._time,
-                            nfft=nfft, overlap=over, fstart=fstart, fend=fend,
-                            cmap=cmap, contrast=contrast, interp=interp,
-                            norm=norm, method=method)
+        # Get data
+        sf = self._sf
+        data = self._data[chan, ...].copy()  # Ensure we use a copy of the data
+        time = self._time
+        
+        # Set frequency ranges
+        # Total frequency range: 0.5-40Hz, used for total power calculation
+        total_fstart = 0.5
+        total_fend = 40.0
+        
+        # Beta band: 13-30Hz
+        beta_fstart = 13.0
+        beta_fend = 30.0
+        
+        # Calculate total power spectrum
+        nperseg = int(round(nfft * sf))
+        overlap_samples = int(round(over * nperseg))
+        
+        # Use scipy's spectrogram function to calculate power spectrum
+        from scipy import signal as scpsig
+        freq, times, spectrogram = scpsig.spectrogram(
+            data, fs=sf, nperseg=nperseg, noverlap=overlap_samples, window='hamming'
+        )
+        
+        # Find index ranges for total frequency band and beta band
+        total_idx_start = np.abs(freq - total_fstart).argmin()
+        total_idx_end = np.abs(freq - total_fend).argmin()
+        
+        beta_idx_start = np.abs(freq - beta_fstart).argmin()
+        beta_idx_end = np.abs(freq - beta_fend).argmin()
+        
+        # Calculate total power and beta band power for each time point
+        total_power = np.sum(spectrogram[total_idx_start:total_idx_end+1, :], axis=0)
+        beta_power = np.sum(spectrogram[beta_idx_start:beta_idx_end+1, :], axis=0)
+        
+        # Calculate beta band power ratio
+        beta_ratio = beta_power / total_power
+        
+        # Ensure no NaN or Inf values
+        beta_ratio = np.nan_to_num(beta_ratio, nan=0.0, posinf=1.0, neginf=0.0)
+        
+        print(f"Beta ratio calculation completed, max: {beta_ratio.max():.4f}, min: {beta_ratio.min():.4f}, mean: {beta_ratio.mean():.4f}")
+        
+        try:
+            # Display beta power ratio as a curve
+            # Set appropriate range for y-axis
+            y_min = 0.0  # Minimum beta power ratio is 0
+            y_max = min(1.0, beta_ratio.max() * 1.1)  # Upper limit is 1 or 1.1 times the max value
+            if y_max < 0.1:  # If data is very small, ensure sufficient display space
+                y_max = 0.1
+            
+            self._custom.set_curve_data(
+                curve_data=beta_ratio,
+                time=times,  # Use time points from spectrogram calculation
+                ylim=(y_min, y_max),
+                cmap=cmap
+            )
+            print(f"Beta ratio curve successfully set to CustomMetrics, display range: {y_min}-{y_max}")
+        except Exception as e:
+            print(f"Error setting curve data: {e}")
+            # If curve method fails, try using the original method
+            self._custom.set_data(sf, data, time,
+                                 nfft=nfft, overlap=over, 
+                                 fstart=beta_fstart, fend=beta_fend,
+                                 cmap=cmap, contrast=0.5, 
+                                 interp='bilinear', norm=0)
 
     def _fcn_custom_compat(self):
         """Check compatibility between custom metrics parameters."""
