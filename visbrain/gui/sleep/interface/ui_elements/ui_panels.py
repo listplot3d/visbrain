@@ -117,6 +117,9 @@ class UiPanels(object):
         self._customLabel.setText(self._addspace + "Custom Metrics")
         self._customLabel.setFont(self._font)
         self._chanGrid.addWidget(self._customLabel, len(self) + 2, 0, 1, 1)
+        # 确保CustomMetrics在初始时是可见的，与菜单状态一致
+        self._CustomW.setVisible(True)
+        self._customLabel.setVisible(True)
         PROFILER("CustomMetrics", level=2)
 
         # =====================================================================

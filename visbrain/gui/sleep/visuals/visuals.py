@@ -1483,7 +1483,7 @@ class CanvasShortcuts(object):
                 cursor = self._time[0] + self._time[-1] * x_vb / vb_size[0]
             else:
                 val = self._SlVal.value()
-                step = self._SigStep
+                step = self._SigStep.value()  # 获取_SigStep的值，而不是对象本身
                 win = self._SigWin.value()
                 tm, th = (val * step, val * step + win)
                 cursor = tm + ((th - tm) * x_vb / vb_size[0])

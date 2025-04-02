@@ -74,6 +74,7 @@ class UiMenu(HelpMenu):
         self.menuDispCustomMetrics = QtWidgets.QAction(self)
         self.menuDispCustomMetrics.setCheckable(True)
         self.menuDispCustomMetrics.setText("Custom Metrics")
+        self.menuDispCustomMetrics.setChecked(True)  
         self.menuDispCustomMetrics.triggered.connect(self._disptog_custommetrics)
         self.menuDisplay.addAction(self.menuDispCustomMetrics)
         
