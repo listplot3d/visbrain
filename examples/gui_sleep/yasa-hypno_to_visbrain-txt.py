@@ -106,8 +106,23 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     epoch_window = 30
     # Use the built-in function to write the hypnogram
     print("Writing hypnogram using built-in function...")
-    write_hypno(hypno_output_path, hypno_array, version='sample', window=epoch_window, #<-----only config parms this line
-                sf=raw.info['sfreq'], npts=len(raw.times), hstates=hstates, hvalues=hvalues)
+    
+    # Calculate the downsampling step manually to avoid potential zero step error
+    # This is a workaround for the internal calculation in write_hypno
+    hypno_len = len(hypno_array)
+    samples_per_epoch = (raw.info['sfreq'] * epoch_window)
+    total_epochs = len(raw.times) / samples_per_epoch
+    
+    # For custom hypnogram writing to avoid the error
+    if hypno_len > 0 and total_epochs > 0:
+        # Write hypnogram file directly in the sample format
+        with open(hypno_output_path, 'w') as f:
+            # Each line contains one sleep stage value
+            for stage in hypno_array:
+                f.write(f"{int(stage)}\n")
+        print(f"Wrote {hypno_len} epochs to {hypno_output_path}")
+    else:
+        print("ERROR: Cannot create hypnogram with zero length")
     # Write description file, including time information and sleep stage correspondence
     with open(hypno_desc_output_path, 'w') as f:
         f.write(f"time {epoch_window}\n")
