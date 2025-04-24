@@ -4,6 +4,7 @@ import numpy as np
 import os
 import argparse
 import time
+import matplotlib.pyplot as plt
 
 # Import visbrain's hypnogram data read/write module
 from visbrain.io import write_hypno
@@ -43,7 +44,7 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     Returns
     -------
     tuple
-        Paths to the generated hypnogram and description files
+        Paths to the generated hypnogram and description files and image
     """
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
@@ -55,12 +56,15 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
     # Set output file paths
     hypno_output_path = os.path.join(output_dir, f"{edf_name}_hypno.txt")
     hypno_desc_output_path = os.path.join(output_dir, f"{edf_name}_hypno_description.txt")
+    hypno_image_path = os.path.join(output_dir, f"{edf_name}_hypnogram.png")
     
     # Remove existing files if they exist
     if os.path.exists(hypno_output_path):
         os.remove(hypno_output_path)
     if os.path.exists(hypno_desc_output_path):
         os.remove(hypno_desc_output_path)
+    if os.path.exists(hypno_image_path):
+        os.remove(hypno_image_path)
     
     # Read EDF file
     raw = mne.io.read_raw_edf(edf_file, preload=True)
@@ -129,8 +133,28 @@ def generate_visbrain_hypnogram(edf_file, output_dir):
         for state, value in zip(hstates, hvalues):
             f.write(f"{state} {value}\n")
     
+    # Generate and save hypnogram plot image
+    print("Generating hypnogram plot image...")
+    
+    # Convert numeric values to YASA-compatible format for plotting
+    y_pred_numeric = np.array(y_pred_visbrain)
+    
+    # Create figure and plot hypnogram
+    fig, ax = plt.subplots(1, 1, figsize=(12, 4), dpi=100)
+    yasa.plot_hypnogram(y_pred_numeric, ax=ax)
+    
+    # Add title and improve layout
+    ax.set_title(f"Hypnogram: {edf_name}")
+    plt.tight_layout()
+    
+    # Save the figure
+    plt.savefig(hypno_image_path)
+    plt.close(fig)  # Close the figure to free memory
+    
+    print(f"Hypnogram image saved to: {hypno_image_path}")
     print("Hypnogram files created successfully")
-    return hypno_output_path, hypno_desc_output_path
+    
+    return hypno_output_path, hypno_desc_output_path, hypno_image_path
 
 
 def main():
@@ -157,12 +181,13 @@ def main():
     
     # Generate hypnogram files
     try:
-        hypno_file, desc_file = generate_visbrain_hypnogram(edf_file, output_dir)
+        hypno_file, desc_file, image_file = generate_visbrain_hypnogram(edf_file, output_dir)
         
         # Print output information
         print(f"\nFiles generated successfully:")
         print(f"1. {hypno_file}")
         print(f"2. {desc_file}")
+        print(f"3. {image_file}")
 
         time.sleep(3)
         Sleep(data=edf_file, hypno=hypno_file).show()

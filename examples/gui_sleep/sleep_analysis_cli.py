@@ -76,13 +76,14 @@ def main():
         print("Using default option: 2. Generate hypnogram and display in Visbrain")
     
     try:
-        # Generate hypnogram files
-        hypno_file, desc_file = generate_visbrain_hypnogram(edf_file, output_dir)
+        # Generate hypnogram files and image
+        hypno_file, desc_file, image_file = generate_visbrain_hypnogram(edf_file, output_dir)
         
         # Print output information
         print(f"\nFiles generated successfully:")
         print(f"1. {hypno_file}")
         print(f"2. {desc_file}")
+        print(f"3. {image_file}")
         
         # Display in Visbrain if option 2 was selected
         if choice == "2":
